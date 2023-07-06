@@ -23,10 +23,13 @@ public class PlayerController : MonoBehaviour
     private Vector2 originSize;
 
     public float jumpForce;     // 跳跃力
+    public float hurtForce;     // 反弹力
 
     [Header("状态")]
     public bool isRun;
     public bool isCrouch;
+    public bool isHurt;
+    public bool isDead;
 
     private void Awake()
     {
@@ -70,12 +73,15 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         inputDirection = inputAction.Gameplay.Move.ReadValue<Vector2>();
+
+        CheckState();   // 状态检测
     }
 
     private void FixedUpdate()
     {   
-        //移动
-        Move();
+        if(!isHurt)
+            //移动
+            Move();
     }
 
     /// <summary>
@@ -131,5 +137,40 @@ public class PlayerController : MonoBehaviour
     {
         if(physicsCheck.isGround)
           rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    /// <summary>
+    /// 计算反弹
+    /// </summary>
+    /// <param name="attacker">攻击者位置</param>
+    public void GetHurt(Transform attacker)
+    {
+        isHurt = true;
+        rb.velocity = Vector2.zero;     // 速度归零
+        Vector2 dir = new Vector2((transform.position.x - attacker.position.x), 0).normalized;      // 计算方向，归一化
+        rb.AddForce(dir*hurtForce, ForceMode2D.Impulse);    // 添加反弹力
+    }
+
+    /// <summary>
+    /// 执行死亡
+    /// </summary>
+    public void PlayDead()
+    {
+        isDead = true;
+        inputAction.Gameplay.Disable();     // 禁止输入
+    }
+
+    /// <summary>
+    /// 状态检测
+    /// </summary>
+    private void CheckState()
+    {
+        if (isDead)
+            /*
+             LayerMask.NameToLayer("Enemy")--获取Enemy层的index,赋予给gameObject.layer
+             */
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
+        else
+            gameObject.layer = LayerMask.NameToLayer("Player");
     }
 }
