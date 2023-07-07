@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
     private CapsuleCollider2D coll;         // 碰撞体
+    private PlayerAnimation playerAnimation;
 
     private int faceDir;        //当前人物面向
 
@@ -30,10 +32,16 @@ public class PlayerController : MonoBehaviour
     public bool isCrouch;
     public bool isHurt;
     public bool isDead;
+    public bool isAttack;
+
+    [Header("物理材质")]
+    public PhysicsMaterial2D normal;    // 有摩擦力
+    public PhysicsMaterial2D wall;      // 无摩擦力
 
     private void Awake()
     {
         inputAction = new PlayerInputControl();
+        playerAnimation = GetComponent<PlayerAnimation>();
 
         rb = GetComponent<Rigidbody2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
@@ -58,6 +66,9 @@ public class PlayerController : MonoBehaviour
             isRun = false;
         };
         #endregion
+
+        // 攻击
+        inputAction.Gameplay.Attack.started += PlayerAttack;
     }
 
     private void OnEnable()
@@ -79,7 +90,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {   
-        if(!isHurt)
+        if(!isHurt&&!isAttack)
             //移动
             Move();
     }
@@ -140,6 +151,17 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// 玩家攻击
+    /// </summary>
+    /// <param name="obj"></param>
+    private void PlayerAttack(InputAction.CallbackContext obj)
+    {
+        playerAnimation.PlayAttack();
+        isAttack = true;
+    }
+
+
+    /// <summary>
     /// 计算反弹
     /// </summary>
     /// <param name="attacker">攻击者位置</param>
@@ -172,5 +194,8 @@ public class PlayerController : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("Enemy");
         else
             gameObject.layer = LayerMask.NameToLayer("Player");
+
+        // 根据是否在地面选择不同物理材质
+        coll.sharedMaterial = physicsCheck.isGround ? normal : wall;
     }
 }

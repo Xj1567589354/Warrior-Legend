@@ -31,6 +31,7 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetBool("isGround", physicsCheck.isGround);
         animator.SetBool("isCrouch", controller.isCrouch);
         animator.SetBool("isDead", controller.isDead);
+        animator.SetBool("isAttack", controller.isAttack);
     }
 
     /// <summary>
@@ -39,5 +40,13 @@ public class PlayerAnimation : MonoBehaviour
     public void PlayerHurt()
     {
         animator.SetTrigger("hurt");
+    }
+
+    /// <summary>
+    /// Ö´ÐÐ¹¥»÷¶¯»­
+    /// </summary>
+    public void PlayAttack()
+    {
+        animator.SetTrigger("attack");
     }
 }
