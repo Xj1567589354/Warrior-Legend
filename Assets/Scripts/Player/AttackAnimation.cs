@@ -8,7 +8,7 @@ public class AttackAnimation : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         // 限制玩家攻击时有位移
-        //animator.GetComponent<PlayerController>().isAttack = true;
+        animator.GetComponent<PlayerController>().isAttack = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
