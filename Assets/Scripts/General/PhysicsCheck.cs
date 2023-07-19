@@ -45,11 +45,11 @@ public class PhysicsCheck : MonoBehaviour
     public void Check()
     {
         // µÿ√ÊºÏ≤‚
-        isGround = Physics2D.OverlapCircle((Vector2)transform.position+bottomOffset, checkRadius, layerMask);
+        isGround = Physics2D.OverlapCircle((Vector2)transform.position+new Vector2(bottomOffset.x * transform.localScale.x, 0), checkRadius, layerMask);
 
         // «ΩÃÂºÏ≤‚
-        isTouchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position+leftOffset, checkRadius, layerMask);
-        isTouchRightWall = Physics2D.OverlapCircle((Vector2)transform.position+rightOffset, checkRadius, layerMask);
+        isTouchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(leftOffset.x, leftOffset.y), checkRadius, layerMask);
+        isTouchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(rightOffset.x, rightOffset.y), checkRadius, layerMask);
     }
 
 
@@ -58,8 +58,8 @@ public class PhysicsCheck : MonoBehaviour
     /// </summary>
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere((Vector2)transform.position+bottomOffset, checkRadius); 
-        Gizmos.DrawWireSphere((Vector2)transform.position+leftOffset, checkRadius); 
-        Gizmos.DrawWireSphere((Vector2)transform.position+rightOffset, checkRadius); 
+        Gizmos.DrawWireSphere((Vector2)transform.position + new Vector2(bottomOffset.x * transform.localScale.x, bottomOffset.y), checkRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position+new Vector2(leftOffset.x, leftOffset.y), checkRadius); 
+        Gizmos.DrawWireSphere((Vector2)transform.position+ new Vector2(rightOffset.x, rightOffset.y), checkRadius); 
     }
 }
