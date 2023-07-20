@@ -11,7 +11,7 @@ public class Charactor : MonoBehaviour
 
     [Header("攻击无敌")]
     public float invulnerableDuration;      // 无敌时间
-    private float invulnerableCounter;        // 无敌计数器
+    [HideInInspector]public float invulnerableCounter;        // 无敌计数器
     public bool invulnerable;       // 无敌状态
 
     [Header("Unity事件")]

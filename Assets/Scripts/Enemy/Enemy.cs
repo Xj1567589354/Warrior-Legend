@@ -5,6 +5,7 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[RequireComponent(typeof(Rigidbody2D),typeof(Animator),typeof(PhysicsCheck))]
 public class Enemy : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour
     private BaseState currentState;
     protected BaseState patrolState;        // Ñ²Âß×´Ì¬
     protected BaseState chaseState;         // ×·»÷×´Ì¬
+    protected BaseState skillState;         // ¶ã²Ø×´Ì¬
 
     [Header("¼ì²â")]
     public Vector2 centerOffset;    // ¼ì²âÆ«ÒÆ
@@ -85,7 +87,8 @@ public class Enemy : MonoBehaviour
 
     public void Move()
     {
-        rb.velocity = new Vector2(faceDir.x * currentSpeed * Time.deltaTime, rb.velocity.y);
+        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("PreMove")&& !animator.GetCurrentAnimatorStateInfo(0).IsName("SnailRecover"))
+           rb.velocity = new Vector2(faceDir.x * currentSpeed * Time.deltaTime, rb.velocity.y);
     }
 
     /// <summary>
@@ -135,6 +138,7 @@ public class Enemy : MonoBehaviour
         {
             NPCState.Patrol => patrolState,
             NPCState.Chase => chaseState,
+            NPCState.Skill => skillState,
             _=>null
         };
         currentState.OnExit();          // ÍË³öÉÏÒ»×´Ì¬

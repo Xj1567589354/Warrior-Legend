@@ -1,4 +1,4 @@
 public enum NPCState
 {
-    Patrol, Chase,
+    Patrol, Chase,Skill
 }
