@@ -9,6 +9,7 @@ public class SnailSkillState : BaseState
         currentEnemy.animator.SetTrigger("skill");
 
         currentEnemy.lostTimeCounter = currentEnemy.lostTime;
+
         currentEnemy.GetComponent<Charactor>().invulnerable = true;
         /*如果一直有丢失时间，就代表发现了敌人，就一直处于无敌状态*/
         currentEnemy.GetComponent<Charactor>().invulnerableCounter = currentEnemy.lostTimeCounter;

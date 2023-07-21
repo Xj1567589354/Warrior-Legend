@@ -6,7 +6,7 @@ public class Attack : MonoBehaviour
 {
     [Header("»ù±¾ÊôĞÔ")]
     public int damage;      // ÉËº¦Öµ
-    public int attackRange;     // ¹¥»÷·¶Î§
+    public float attackRange;     // ¹¥»÷·¶Î§
     public int attackRate;      // ¹¥»÷ÆµÂÊ
 
     private void OnTriggerStay2D(Collider2D other)

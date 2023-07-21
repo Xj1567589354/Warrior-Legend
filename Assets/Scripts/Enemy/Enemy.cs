@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(Rigidbody2D),typeof(Animator),typeof(PhysicsCheck))]
 public class Enemy : MonoBehaviour
 {
-    Rigidbody2D rb;
+    [HideInInspector]public Rigidbody2D rb;
     [HideInInspector]public Animator animator;
     [HideInInspector]public PhysicsCheck physicsCheck;
 
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public Vector2 hurtDir;     // 受伤方向
 
     public Transform attacker;  // 攻击者
+    public Vector3 spwanPoint;  // 蜜蜂初始生成点
 
     [Header("计时器")]
     public float waitTime;      // 等待时间
@@ -55,6 +56,7 @@ public class Enemy : MonoBehaviour
 
         // 初始化计时器
         waitTimeCounter = waitTime;
+        spwanPoint = transform.position;
     }
 
     private void OnEnable()
@@ -85,7 +87,7 @@ public class Enemy : MonoBehaviour
         currentState.OnExit();
     }
 
-    public void Move()
+    public virtual void Move()
     {
         if(!animator.GetCurrentAnimatorStateInfo(0).IsName("PreMove")&& !animator.GetCurrentAnimatorStateInfo(0).IsName("SnailRecover"))
            rb.velocity = new Vector2(faceDir.x * currentSpeed * Time.deltaTime, rb.velocity.y);
@@ -118,12 +120,12 @@ public class Enemy : MonoBehaviour
     /// 发现敌人
     /// </summary>
     /// <returns>bool</returns>
-    public bool FoundPlayer()
+    public virtual bool FoundPlayer()
     {
        return Physics2D.BoxCast(transform.position + (Vector3)centerOffset, checkSize, 0, faceDir, checkDistance, attackLayer);
     }
 
-    public void OnDrawGizmosSelected()
+    public virtual void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position + (Vector3)centerOffset + new Vector3((checkDistance * -transform.localScale.x), 0), 0.2f);
     }
@@ -144,6 +146,15 @@ public class Enemy : MonoBehaviour
         currentState.OnExit();          // 退出上一状态
         currentState = newState;        // 赋予新状态
         currentState.OnEnter(this);     // 进入新状态
+    }
+
+    /// <summary>
+    /// 得到新点
+    /// </summary>
+    /// <returns>默认返回原坐标地址</returns>
+    public virtual Vector3 GetNewPoint()
+    {
+        return transform.position;
     }
 
     #region 事件执行方法
