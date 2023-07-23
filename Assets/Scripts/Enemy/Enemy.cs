@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
         currentState.OnEnter(this);
     }
 
-    private void Update()
+    public void Update()
     {
         // 获取方向
         faceDir = new Vector3(-transform.localScale.x, 0, 0);
@@ -78,8 +78,10 @@ public class Enemy : MonoBehaviour
     {
         currentState.PhysicsUpdate();
         if (!isHurt && !isDead && !wait)
+        {
             // 移动
-            Move();  
+            Move();
+        }
     }
 
     private void OnDisable()
@@ -101,7 +103,7 @@ public class Enemy : MonoBehaviour
         if (wait)
         {
             waitTimeCounter -= Time.deltaTime;
-            if(waitTimeCounter <= 0)
+            if(waitTimeCounter <= 0.1)
             {
                 wait = false;
                 waitTimeCounter = waitTime;     // 重置计时器
@@ -158,7 +160,7 @@ public class Enemy : MonoBehaviour
     }
 
     #region 事件执行方法
-    public void OnTakeDamage(Transform attackerTrans)
+    public virtual void OnTakeDamage(Transform attackerTrans)
     {
         // 玩家
         attacker = attackerTrans;    
@@ -182,7 +184,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     /// <param name="_hurtDir">受伤方向</param>
     /// <returns></returns>
-    private IEnumerator OnHurt(Vector2 _hurtDir)
+    public IEnumerator OnHurt(Vector2 _hurtDir)
     {
         rb.AddForce(_hurtDir * hurtForce, ForceMode2D.Impulse);
         // 等待0.45s之后结束受伤状态
