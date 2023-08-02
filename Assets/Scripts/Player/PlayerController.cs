@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private PhysicsCheck physicsCheck;
     private CapsuleCollider2D coll;         // 碰撞体
     private PlayerAnimation playerAnimation;
+    private Charactor charactor;
 
     private int faceDir;        //当前人物面向
 
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce;     // 跳跃力
     public float hurtForce;     // 反弹力
+    public float wallJumpForce; // 蹬墙跳力
+    public float slideDistance; // 滑铲距离
+    public float slideSpeed;    // 滑铲速度
+    public int slidePowerCost;  // 滑铲消耗值
 
     [Header("状态")]
     public bool isRun;
@@ -33,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public bool isHurt;
     public bool isDead;
     public bool isAttack;
+    public bool walkJump;
+    public bool isSlide;
 
     [Header("物理材质")]
     public PhysicsMaterial2D normal;    // 有摩擦力
@@ -45,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
+        charactor = GetComponent<Charactor>();
 
         //碰撞体初始化
         coll = GetComponent<CapsuleCollider2D>();
@@ -69,6 +77,9 @@ public class PlayerController : MonoBehaviour
 
         // 攻击
         inputAction.Gameplay.Attack.started += PlayerAttack;
+
+        // 滑铲
+        inputAction.Gameplay.Slide.started += Slide;
     }
 
     private void OnEnable()
@@ -101,7 +112,7 @@ public class PlayerController : MonoBehaviour
     public void Move()
     {
         // 下蹲时禁止移动
-        if (!isCrouch)
+        if (!isCrouch && !walkJump)
         {
             if (isRun == false)
                 // 人物步行速度设置
@@ -146,8 +157,19 @@ public class PlayerController : MonoBehaviour
     /// <exception cref="NotImplementedException"></exception>
     private void Jump(InputAction.CallbackContext obj)
     {
-        if(physicsCheck.isGround)
-          rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        if (physicsCheck.isGround)
+        {
+            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+
+            // 终止滑铲协程
+            isSlide = false;
+            StopAllCoroutines();
+        }
+        else if (physicsCheck.onWall)
+        {
+            rb.AddForce(new Vector2(-inputDirection.x, 1.5f) * wallJumpForce, ForceMode2D.Impulse);
+            walkJump = true;
+        }
     }
 
     /// <summary>
@@ -160,6 +182,58 @@ public class PlayerController : MonoBehaviour
         isAttack = true;
     }
 
+    /// <summary>
+    /// 滑铲
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <exception cref="NotImplementedException"></exception>
+    private void Slide(InputAction.CallbackContext obj)
+    {
+        if (!isSlide && physicsCheck.isGround && (charactor.currentPower >= slidePowerCost))
+        {
+            isSlide = true;
+
+            // 滑铲目标点
+            var targetPos = new Vector3(transform.position.x + slideDistance * transform.localScale.x, transform.position.y);
+
+            // 滑铲无敌帧
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
+            // 开始协程
+            StartCoroutine(TriggerSilde(targetPos));
+
+            // 能量值消耗
+            charactor.OnSlide(slidePowerCost);
+        }
+    }
+
+    /// <summary>
+    /// 滑铲协程
+    /// </summary>
+    /// <param name="_targetPose">目标位置</param>
+    /// <returns></returns>
+    private IEnumerator TriggerSilde(Vector3 _targetPose)
+    {
+        do
+        {
+            yield return null;
+            // 判断是否靠近悬崖
+            if (!physicsCheck.isGround)
+                break;
+            // 判断是否靠近墙体
+            if((physicsCheck.isTouchLeftWall && transform.localScale.x < 0.0f) || (physicsCheck.isTouchRightWall && transform.localScale.x > 0.0f))
+            {
+                isSlide = false;
+                break;
+            }
+
+            // 滑铲前进
+            rb.MovePosition(new Vector2(transform.position.x + transform.localScale.x * slideSpeed, transform.position.y));
+        }
+        while (MathF.Abs(_targetPose.x - transform.position.x) > 0.1f);
+
+        isSlide = false;
+        gameObject.layer = LayerMask.NameToLayer("Player");
+    }
 
     /// <summary>
     /// 计算反弹
@@ -187,15 +261,24 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void CheckState()
     {
-        if (isDead)
-            /*
+        if (isDead || isSlide)
+             /*
              LayerMask.NameToLayer("Enemy")--获取Enemy层的index,赋予给gameObject.layer
              */
-            gameObject.layer = LayerMask.NameToLayer("Enemy");
+             gameObject.layer = LayerMask.NameToLayer("Enemy");
         else
-            gameObject.layer = LayerMask.NameToLayer("Player");
+             gameObject.layer = LayerMask.NameToLayer("Player");
 
         // 根据是否在地面选择不同物理材质
         coll.sharedMaterial = physicsCheck.isGround ? normal : wall;
+
+        // 限制蹬墙跳速度
+        if (physicsCheck.onWall)
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2.0f);
+        else
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+
+        if(walkJump && rb.velocity.y < 0.0f)
+            walkJump = false;
     }
 }

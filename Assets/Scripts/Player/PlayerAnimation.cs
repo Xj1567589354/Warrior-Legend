@@ -32,6 +32,8 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetBool("isCrouch", controller.isCrouch);
         animator.SetBool("isDead", controller.isDead);
         animator.SetBool("isAttack", controller.isAttack);
+        animator.SetBool("onWall", physicsCheck.onWall);
+        animator.SetBool("isSlide", controller.isSlide);
     }
 
     /// <summary>

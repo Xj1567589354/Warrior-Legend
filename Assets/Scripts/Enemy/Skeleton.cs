@@ -32,7 +32,7 @@ public class Skeleton : Enemy
         animator.SetTrigger("hurt");
         hurtDir = new Vector2(transform.position.x - attacker.position.x, 0).normalized;
         /*野猪受伤时将x轴上的力停下来，防止野猪原地受伤动画*/
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(0, rb.velocity.y);
         StartCoroutine(OnHurt(hurtDir));
     }
 }

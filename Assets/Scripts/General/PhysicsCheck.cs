@@ -5,12 +5,17 @@ using UnityEngine;
 public class PhysicsCheck : MonoBehaviour
 {
     public bool manual;
+    public bool isPlayer;
+
     private CapsuleCollider2D coll;
+    private PlayerController playerController;
+    private Rigidbody2D rb;
 
     [Header("¼à²â×´Ì¬")]
     public bool isGround;
     public bool isTouchLeftWall;
     public bool isTouchRightWall;
+    public bool onWall;
 
     [Header("¼à²â²ÎÊý")]
     //¼à²â°ë¾¶
@@ -25,6 +30,7 @@ public class PhysicsCheck : MonoBehaviour
     private void Awake()
     {
         coll = GetComponent<CapsuleCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
 
         // ×Ô¶¯¼ì²â×óÓÒÇ½Ìå
         if(!manual)
@@ -32,6 +38,9 @@ public class PhysicsCheck : MonoBehaviour
             rightOffset = new Vector2((coll.bounds.size.x + coll.offset.x) / 2, coll.bounds.size.y / 2);
             leftOffset = new Vector2(-rightOffset.x, rightOffset.y);
         }
+
+        if(isPlayer)
+            playerController = GetComponent<PlayerController>();
     }
 
     private void Update()
@@ -45,11 +54,18 @@ public class PhysicsCheck : MonoBehaviour
     public void Check()
     {
         // µØÃæ¼ì²â
-        isGround = Physics2D.OverlapCircle((Vector2)transform.position+new Vector2(bottomOffset.x * transform.localScale.x, 0), checkRadius, layerMask);
+        if(onWall)
+            isGround = Physics2D.OverlapCircle((Vector2)transform.position+new Vector2(bottomOffset.x * transform.localScale.x, bottomOffset.y), checkRadius, layerMask);
+        else
+            isGround = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(bottomOffset.x * transform.localScale.x, 0), checkRadius, layerMask);
 
         // Ç½Ìå¼ì²â
         isTouchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(leftOffset.x, leftOffset.y), checkRadius, layerMask);
         isTouchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(rightOffset.x, rightOffset.y), checkRadius, layerMask);
+
+        // ÔÚÇ½±ÚÉÏ
+        if(isPlayer)
+            onWall = ((isTouchLeftWall && playerController.inputDirection.x < 0.0f) || (isTouchRightWall && playerController.inputDirection.x > 0.0f)) && rb.velocity.y < 0.0f;
     }
 
 
