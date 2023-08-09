@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
         physicsCheck = GetComponent<PhysicsCheck>();
 
         // 初始化计时器
-        waitTimeCounter = waitTime;
+        // waitTimeCounter = waitTime;
         spwanPoint = transform.position;
     }
 

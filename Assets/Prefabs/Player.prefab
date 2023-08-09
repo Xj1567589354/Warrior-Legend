@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 335258148442464778}
   - component: {fileID: 8831009651844756357}
   - component: {fileID: 4047787384831202431}
+  - component: {fileID: 3970371462286636891}
   m_Layer: 0
   m_Name: Attack3
   m_TagString: Untagged
@@ -112,6 +113,21 @@ MonoBehaviour:
   damage: 20
   attackRange: 0
   attackRate: 0
+--- !u!114 &3970371462286636891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44310996792991144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974860b75d21dc14b9654c4a1b159072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAudioEventSO: {fileID: 11400000, guid: e70b4e3521097f64a93608f508f88948, type: 2}
+  audioClip: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
+  playOnEnable: 1
 --- !u!1 &1382650954682798422
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +139,7 @@ GameObject:
   - component: {fileID: 701108570431013542}
   - component: {fileID: 587477552828193721}
   - component: {fileID: 5885526803087148016}
+  - component: {fileID: 1791517886542673967}
   m_Layer: 0
   m_Name: Attack2
   m_TagString: Untagged
@@ -218,6 +235,21 @@ MonoBehaviour:
   damage: 10
   attackRange: 0
   attackRate: 0
+--- !u!114 &1791517886542673967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382650954682798422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974860b75d21dc14b9654c4a1b159072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAudioEventSO: {fileID: 11400000, guid: e70b4e3521097f64a93608f508f88948, type: 2}
+  audioClip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+  playOnEnable: 1
 --- !u!1 &4187471046485296358
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +288,7 @@ Transform:
   m_Children:
   - {fileID: 8896040230379842076}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5643935235330394164
 SpriteRenderer:
@@ -410,11 +442,17 @@ MonoBehaviour:
   runSpeed: 490
   jumpForce: 18.5
   hurtForce: 8
+  wallJumpForce: 0
+  slideDistance: 0
+  slideSpeed: 0
+  slidePowerCost: 0
   isRun: 0
   isCrouch: 0
   isHurt: 0
   isDead: 0
   isAttack: 0
+  walkJump: 0
+  isSlide: 0
   normal: {fileID: 6200000, guid: 949897f24c76f7144ad9c965e17b2245, type: 2}
   wall: {fileID: 6200000, guid: df44ee365b81a7d4a91e6c45c2bc4357, type: 2}
 --- !u!114 &8948579040842559080
@@ -430,9 +468,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manual: 1
+  isPlayer: 0
   isGround: 0
   isTouchLeftWall: 0
   isTouchRightWall: 0
+  onWall: 0
   checkRadius: 0.05
   layerMask:
     serializedVersion: 2
@@ -464,11 +504,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81460ae139afc824699fc150985758de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 50
   currentHealth: 0
+  maxPower: 0
+  currentPower: 0
+  powerRecoverSpeed: 0
   invulnerableDuration: 2
   invulnerableCounter: 0
   invulnerable: 0
+  onHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
   onTakeDamage:
     m_PersistentCalls:
       m_Calls:
@@ -556,6 +603,7 @@ GameObject:
   - component: {fileID: 8683214429015089718}
   - component: {fileID: 3864510775875319312}
   - component: {fileID: 8086879385797009184}
+  - component: {fileID: 2085706726464981589}
   m_Layer: 0
   m_Name: Attack1
   m_TagString: Untagged
@@ -644,3 +692,18 @@ MonoBehaviour:
   damage: 10
   attackRange: 0
   attackRate: 0
+--- !u!114 &2085706726464981589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504132041683776624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974860b75d21dc14b9654c4a1b159072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAudioEventSO: {fileID: 11400000, guid: e70b4e3521097f64a93608f508f88948, type: 2}
+  audioClip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+  playOnEnable: 1
