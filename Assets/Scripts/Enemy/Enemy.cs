@@ -170,7 +170,7 @@ public class Enemy : MonoBehaviour
         if (attacker.position.x - transform.position.x < 0)
             transform.localScale = new Vector3(1, 1, 1);
 
-        // ÊÜÉË»÷ÍË
+        // ÊÜÉË±»»÷ÍË
         isHurt = true;
         animator.SetTrigger("hurt");
         hurtDir = new Vector2(transform.position.x - attacker.position.x, 0).normalized;
@@ -197,9 +197,9 @@ public class Enemy : MonoBehaviour
     /// </summary>
     public void OnDie()
     {
+        gameObject.layer = 2;
         isDead = true;
         animator.SetBool("dead", isDead);
-        gameObject.layer = 2;
     }
 
     public void OnDestroyAfterAnimation()

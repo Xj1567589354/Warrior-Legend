@@ -64,8 +64,10 @@ public class PhysicsCheck : MonoBehaviour
         isTouchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(rightOffset.x, rightOffset.y), checkRadius, layerMask);
 
         // тзг╫╠зио
-        if(isPlayer)
-            onWall = ((isTouchLeftWall && playerController.inputDirection.x < 0.0f) || (isTouchRightWall && playerController.inputDirection.x > 0.0f)) && rb.velocity.y < 0.0f;
+        if (isPlayer)
+        {
+            onWall = (isTouchLeftWall && playerController.inputDirection.x < 0.0f || isTouchRightWall && playerController.inputDirection.x > 0.0f) && rb.velocity.y < 0.0f;
+        }
     }
 
 

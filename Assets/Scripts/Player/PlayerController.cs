@@ -7,6 +7,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("监听事件")]
+    public SceneLoaderEventSO loadEvent;
+    public VoidEventSO afterSceneLoadedEvent;
+
     public PlayerInputControl inputAction;      //新输入系统
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
@@ -66,7 +70,7 @@ public class PlayerController : MonoBehaviour
         /*
          ctx--回调函数，节约代码空间
         */
-        inputAction.Gameplay.Run.started += ctx => { 
+        inputAction.Gameplay.Run.performed += ctx => { 
             isRun = true;
         };
         inputAction.Gameplay.Run.canceled += ctx =>
@@ -85,11 +89,15 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         inputAction.Enable();
+        loadEvent.LoadRequestEvent += OnLoadEvent;
+        afterSceneLoadedEvent.onEventRaised += OnAfterSceneLoadedEvent;
     }
 
     private void OnDisable()
     {
         inputAction.Disable();
+        loadEvent.LoadRequestEvent -= OnLoadEvent;
+        afterSceneLoadedEvent.onEventRaised -= OnAfterSceneLoadedEvent;
     }
 
     private void Update()
@@ -107,6 +115,26 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// 刚开始加载场景执行的事件
+    /// </summary>
+    /// <param name="arg0"></param>
+    /// <param name="arg1"></param>
+    /// <param name="arg2"></param>
+    private void OnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
+    {
+        inputAction.Gameplay.Disable();     // 禁用输入系统
+    }
+
+    /// <summary>
+    /// 加载场景之后执行的事件
+    /// </summary>
+    private void OnAfterSceneLoadedEvent()
+    {
+        inputAction.Gameplay.Enable();     // 启用输入系统
+    }
+
+
+    /// <summary>
     /// 人物移动
     /// </summary>
     public void Move()
@@ -116,10 +144,10 @@ public class PlayerController : MonoBehaviour
         {
             if (isRun == false)
                 // 人物步行速度设置
-                rb.velocity = new Vector2(inputDirection.x * walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(inputDirection.x * walkSpeed * Time.deltaTime, rb.velocity.y);
             else
                 // 人物跑步速度设置
-                rb.velocity = new Vector2(inputDirection.x * runSpeed * Time.fixedDeltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(inputDirection.x * runSpeed * Time.deltaTime, rb.velocity.y);
         }
 
         // 初始化人物当前面向，数值为1
@@ -160,6 +188,7 @@ public class PlayerController : MonoBehaviour
         if (physicsCheck.isGround)
         {
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+            //GetComponent<AudioDefination>().PlayAudioClip();        // 播放音效
 
             // 终止滑铲协程
             isSlide = false;
@@ -167,7 +196,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (physicsCheck.onWall)
         {
-            rb.AddForce(new Vector2(-inputDirection.x, 1.5f) * wallJumpForce, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(-inputDirection.x, 2.5f) * wallJumpForce, ForceMode2D.Impulse);
             walkJump = true;
         }
     }

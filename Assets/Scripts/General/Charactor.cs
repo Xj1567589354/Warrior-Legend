@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class Charactor : MonoBehaviour
 {
+    [Header("事件监听")]
+    public VoidEventSO newGameEvent;
+
     public bool isPlayer;
 
     [Header("基本属性")]
@@ -21,18 +24,33 @@ public class Charactor : MonoBehaviour
     public bool invulnerable;       // 无敌状态
 
     [Header("Unity事件")]
+    // UnityEvent能够通知很多在其注册的函数方法
     public UnityEvent<Charactor> onHealthChange;  // 血条事件
     public UnityEvent<Transform> onTakeDamage;    // 受伤事件
     public UnityEvent onDie;        // 死亡事件
 
+
     private void Start()
+    {
+        currentHealth = maxHealth;
+        controller = GetComponent<PlayerController>();
+    }
+    private void NewGame()
     {
         currentHealth = maxHealth;
         currentPower = maxPower;
         // 初始化血条
         onHealthChange?.Invoke(this);
+    }
 
-        controller = GetComponent<PlayerController>();
+    private void OnEnable()
+    {
+        newGameEvent.onEventRaised += NewGame;
+    }
+
+    private void OnDisable()
+    {
+        newGameEvent.onEventRaised -= NewGame;
     }
 
     private void Update()
@@ -48,7 +66,19 @@ public class Charactor : MonoBehaviour
 
         // 能量条恢复
         if (isPlayer && !controller.isSlide && (currentPower < maxPower))
+        {
             currentPower += Time.deltaTime * powerRecoverSpeed;
+        }
+            
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water")){
+            currentHealth = 0;              // 当前血量设为0
+            onHealthChange?.Invoke(this);   // 更新血量
+            onDie?.Invoke();                // 死亡
+        }
     }
 
     public void TakeDamage(Attack attacker)

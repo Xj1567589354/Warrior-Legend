@@ -6,7 +6,7 @@ public class BeeChaseState : BaseState
     private Vector3 targetPos;      // 目标位置
     private Vector3 moveDir;        // 移动方向
     private bool isAttack;          // 攻击状态
-    private float attackRateCounter;    // 攻击计时器
+    private float attackRateCounter=0;    // 攻击计时器
     public override void OnEnter(Enemy enemy)
     {
         currentEnemy = enemy;

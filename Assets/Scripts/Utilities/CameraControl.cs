@@ -10,6 +10,11 @@ public class CameraControl : MonoBehaviour
     private CinemachineConfiner2D confiner2D;
     public CinemachineImpulseSource impulseSource;
 
+
+    [Header("监听")]
+    public VoidEventSO afterSceneLoadedEvent;
+
+    // 监听摄像机振动
     public VoidEventSO cameraEventShake;
 
 
@@ -21,11 +26,18 @@ public class CameraControl : MonoBehaviour
     private void OnEnable()
     {
         cameraEventShake.onEventRaised += OnCameraShakeEvent;
+        afterSceneLoadedEvent.onEventRaised += OnAfterSceneLoaderEvent;
     }
 
     private void OnDisable()
     {
         cameraEventShake.onEventRaised -= OnCameraShakeEvent;
+        afterSceneLoadedEvent.onEventRaised -= OnAfterSceneLoaderEvent;
+    }
+
+    private void OnAfterSceneLoaderEvent()
+    {
+        GetNewCameraBounds();
     }
 
     private void OnCameraShakeEvent()
@@ -33,11 +45,11 @@ public class CameraControl : MonoBehaviour
         impulseSource.GenerateImpulse();
     }
 
-    // 场景切换后更改
-    private void Start()
-    {
-        GetNewCameraBounds();
-    }
+    //// 场景切换后更改
+    //private void Start()
+    //{
+    //    GetNewCameraBounds();
+    //}
 
     /// <summary>
     /// 自动识别Bounds
@@ -48,7 +60,7 @@ public class CameraControl : MonoBehaviour
         var obj = GameObject.FindGameObjectWithTag("Bounds");
         if (obj == null)
             return;
-        // 将改对象上的碰撞体添加到confider2d上
+        // 将该对象上的碰撞体添加到confider2d上
         confiner2D.m_BoundingShape2D = obj.GetComponent<Collider2D>();
 
         // 清理缓存
