@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(order:-100)]
 public class DataManager : MonoBehaviour
 {
     [Header("¼àÌý")]
