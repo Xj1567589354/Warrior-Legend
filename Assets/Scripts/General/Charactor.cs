@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Charactor : MonoBehaviour
+public class Charactor : MonoBehaviour, ISaveable
 {
     [Header("事件监听")]
     public VoidEventSO newGameEvent;
@@ -46,11 +46,17 @@ public class Charactor : MonoBehaviour
     private void OnEnable()
     {
         newGameEvent.onEventRaised += NewGame;
+        // 调用RegisterSaveData方法
+        ISaveable saveable = this;
+        saveable.RegisterSaveData();
     }
 
     private void OnDisable()
     {
         newGameEvent.onEventRaised -= NewGame;
+        // 调用UnRegisterSaveData方法
+        ISaveable saveable = this;
+        saveable.UnRegisterSaveData();
     }
 
     private void Update()
@@ -122,5 +128,39 @@ public class Charactor : MonoBehaviour
     {
         currentPower -= _cost;
         onHealthChange?.Invoke(this);
+    }
+
+    /// <summary>
+    /// 返回GUID
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="System.NotImplementedException"></exception>
+    public DataDefinition GetDataID()
+    {
+        return GetComponent<DataDefinition>();
+    }
+
+    /// <summary>
+    /// 获得数据
+    /// </summary>
+    /// <exception cref="System.NotImplementedException"></exception>
+    public void GetSaveData(Data data)
+    {
+        // 判断Data类中字典当中是否包含当前对象GUID
+        if (data.characterPosDict.ContainsKey(GetDataID().ID))
+            data.characterPosDict[GetDataID().ID] = transform.position;
+        else
+            data.characterPosDict.Add(GetDataID().ID, transform.position);
+    }
+
+    /// <summary>
+    /// 加载数据
+    /// </summary>
+    /// <param name="data"></param>
+    /// <exception cref="System.NotImplementedException"></exception>
+    public void LoadData(Data data)
+    {
+        if (data.characterPosDict.ContainsKey(GetDataID().ID))
+            transform.position = data.characterPosDict[GetDataID().ID];
     }
 }   

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SavePoint : MonoBehaviour, Iinteractable
 {
     [Header("广播")]
-    public VoidEventSO LoadGameEvent;
+    public VoidEventSO SaveDataEvent;
 
     [Header("变量参数")]
     public SpriteRenderer spriteRenderer;
@@ -32,7 +32,7 @@ public class SavePoint : MonoBehaviour, Iinteractable
             lightObj.SetActive(true);
 
             // 呼叫保存数据
-            LoadGameEvent.RasieEvent();     
+            SaveDataEvent.RasieEvent();     
 
             this.gameObject.tag = "Untagged";       // 取消二次互动
         }
