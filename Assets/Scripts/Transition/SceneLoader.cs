@@ -7,7 +7,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour, ISaveable
 {
     public Transform playerTrans;       // 玩家
     public Vector3 firstPostion;      // 初始坐标
@@ -26,9 +26,9 @@ public class SceneLoader : MonoBehaviour
     public GameSceneSO firstLoadScene;      // 新游戏开始的场景
     public GameSceneSO menuScene;           // 菜单
 
-    private GameSceneSO sceneToLoad;
+    private GameSceneSO sceneToLoad;            // 需要加载的场景
     private GameSceneSO currentLoadedScene;     // 当前加载的场景
-    private Vector3 positionToGo;
+    public Vector3 positionToGo;
     private bool fadeSceen;
     private bool isLoading;     // 是否正在加载
 
@@ -51,12 +51,18 @@ public class SceneLoader : MonoBehaviour
     {
         loadEventSO.LoadRequestEvent += OnLoadRequestEvent;
         newGameEvent.onEventRaised += NewGame;
+
+        ISaveable saveable = this;
+        saveable.RegisterSaveData();
     }
 
     private void OnDisable()
     {
         loadEventSO.LoadRequestEvent -= OnLoadRequestEvent;
         newGameEvent.onEventRaised -= NewGame;
+
+        ISaveable saveable = this;
+        saveable.UnRegisterSaveData();
     }
 
     void NewGame()
@@ -74,7 +80,7 @@ public class SceneLoader : MonoBehaviour
     /// <param name="fadeScreen"></param>
     private void OnLoadRequestEvent(GameSceneSO locationToLoad, Vector3 posToGo, bool fadeScreen)
     {
-        // 如果进入新场景，就不如持续按交互E
+        // 如果进入新场景，就不能持续按交互E
         if (isLoading)
         {
             return;
@@ -100,8 +106,8 @@ public class SceneLoader : MonoBehaviour
     {
         if (fadeSceen)
         {
-            //TODD:实现渐入渐出
-            fadeEvent.FadeOut(fadeDurationTime);
+            //TODD:变黑
+            fadeEvent.FadeIn(fadeDurationTime);
         }
 
         yield return new WaitForSeconds(fadeDurationTime);
@@ -137,8 +143,8 @@ public class SceneLoader : MonoBehaviour
         playerTrans.gameObject.SetActive(true);     // 打开玩家
         if (fadeSceen)
         {
-            //TODO：渐入渐出
-            fadeEvent.FadeIn(fadeDurationTime);
+            //TODO：变透明 
+            fadeEvent.FadeOut(fadeDurationTime);
         }
 
         isLoading = false;
@@ -149,5 +155,42 @@ public class SceneLoader : MonoBehaviour
             afterSceneLoadedEvent.RasieEvent();
         }
 
+    }
+
+    /// <summary>
+    /// 获取GUID
+    /// </summary>
+    /// <returns></returns>
+    public DataDefinition GetDataID()
+    {
+        return GetComponent<DataDefinition>();
+    }
+
+    /// <summary>
+    /// 保存场景数据
+    /// </summary>
+    /// <param name="data"></param>
+    /// <exception cref="NotImplementedException"></exception>
+    public void GetSaveData(Data data)
+    {
+        data.SaveGameSceneToString(currentLoadedScene);     // 保存场景
+    }
+
+    /// <summary>
+    /// 加载场景数据
+    /// </summary>
+    /// <param name="data"></param>
+    /// <exception cref="NotImplementedException"></exception>
+    public void LoadData(Data data)
+    {
+        var playerId = playerTrans.GetComponent<DataDefinition>().ID;
+        /*因为玩家所在的场景一定被玩家保存，因此可以使用玩家ID来判断场景数据是否被保存*/
+        if (data.characterPosDict.ContainsKey(playerId))
+        {
+            positionToGo = data.characterPosDict[playerId];             // 获取player坐标
+            sceneToLoad = data.GetSavedSceneToObject();                 // 获取场景对象
+
+            OnLoadRequestEvent(sceneToLoad, positionToGo, true);        // 加载场景
+        }
     }
 }

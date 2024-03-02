@@ -331,11 +331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5076876718928429604, guid: fe5f7a198cfe8e643b71bf85c05de9d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.87
+      value: 70.4
       objectReference: {fileID: 0}
     - target: {fileID: 5076876718928429604, guid: fe5f7a198cfe8e643b71bf85c05de9d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.14
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5076876718928429604, guid: fe5f7a198cfe8e643b71bf85c05de9d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -584,7 +584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.87, y: 10.240001, z: -10}
+  m_LocalPosition: {x: 70.4, y: -2.6999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1543,7 +1543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121111232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.87, y: 10.240001, z: -10}
+  m_LocalPosition: {x: 70.4, y: -2.6999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1907,6 +1907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608431641}
   - component: {fileID: 1608431640}
+  - component: {fileID: 1608431642}
   m_Layer: 0
   m_Name: SceneLoadManager
   m_TagString: Untagged
@@ -1927,7 +1928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTrans: {fileID: 225334705}
-  firstPostion: {x: -9.79, y: -4.79, z: 0}
+  firstPostion: {x: -9.6, y: -4.5, z: 0}
   menuPostion: {x: -4.61, y: -3, z: 0}
   loadEventSO: {fileID: 11400000, guid: a1776773be72ab3408d1b85f4345184b, type: 2}
   newGameEvent: {fileID: 11400000, guid: 2e1185d4c6e2c874fb6eb5ff9f42feea, type: 2}
@@ -1936,7 +1937,7 @@ MonoBehaviour:
   sceneUnloadedEvent: {fileID: 11400000, guid: 464bcb56128f36541a86acda5bea354b, type: 2}
   firstLoadScene: {fileID: 11400000, guid: ea213357f3f09394caee2fd1c277242d, type: 2}
   menuScene: {fileID: 11400000, guid: 661cab82247a1e94e9b415adaadc248d, type: 2}
-  fadeDurationTime: 1
+  fadeDurationTime: 1.5
 --- !u!4 &1608431641
 Transform:
   m_ObjectHideFlags: 0
@@ -1952,6 +1953,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608431642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608431639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c895837c05da99d4c87605f02d8800c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistentType: 0
+  ID: 01490c8f-44fd-46e1-8489-ca06dcd09c7b
 --- !u!1 &1632806130
 GameObject:
   m_ObjectHideFlags: 0

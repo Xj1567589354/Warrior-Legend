@@ -147,10 +147,19 @@ public class Charactor : MonoBehaviour, ISaveable
     public void GetSaveData(Data data)
     {
         // 判断Data类中字典当中是否包含当前对象GUID
+        /*保存角色的坐标血量能量条*/
         if (data.characterPosDict.ContainsKey(GetDataID().ID))
+        {
             data.characterPosDict[GetDataID().ID] = transform.position;
+            data.floatSaveDataDict[GetDataID().ID + "health"] = this.currentHealth;
+            data.floatSaveDataDict[GetDataID().ID + "power"] = this.currentPower;
+        }
         else
+        {
             data.characterPosDict.Add(GetDataID().ID, transform.position);
+            data.floatSaveDataDict.Add(GetDataID().ID + "health", this.currentHealth);
+            data.floatSaveDataDict.Add(GetDataID().ID + "power", this.currentPower);
+        }
     }
 
     /// <summary>
@@ -161,6 +170,13 @@ public class Charactor : MonoBehaviour, ISaveable
     public void LoadData(Data data)
     {
         if (data.characterPosDict.ContainsKey(GetDataID().ID))
+        {
             transform.position = data.characterPosDict[GetDataID().ID];
+            this.currentHealth = data.floatSaveDataDict[GetDataID().ID + "health"];
+            this.currentPower = data.floatSaveDataDict[GetDataID().ID + "power"];
+
+            // 通知UI更新
+            onHealthChange?.Invoke(this);
+        }
     }
 }   
