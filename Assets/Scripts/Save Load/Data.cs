@@ -12,6 +12,7 @@ public class Data
      */
     public Dictionary<string, Vector3> characterPosDict = new Dictionary<string, Vector3>(); 
     public Dictionary<string, float> floatSaveDataDict  = new Dictionary<string, float>();
+    public Dictionary<string, bool> boolSaveDataDict  = new Dictionary<string, bool>();
 
     public string sceneToLoad;      // 需要保存的string类型场景名
 
