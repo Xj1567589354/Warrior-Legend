@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Permissions;
@@ -8,8 +9,8 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
 {
     public Sprite openSprite;
     public Sprite closeSprite;
-    public bool isDone;
     private SpriteRenderer spriteRenderer;
+    public bool isDone;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
     private void OnEnable()
     {
         spriteRenderer.sprite = isDone ? openSprite : closeSprite;      // 根据isDone状态来更换chest图片
+
         ISaveable saveable = this;
         saveable.RegisterSaveData();
     }
@@ -27,16 +29,6 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
     {
         ISaveable saveable = this;
         saveable.UnRegisterSaveData();
-    }
-
-    private void Update()
-    {
-        //Debug.Log("Open Chest");
-        if (isDone)
-        {
-            spriteRenderer.sprite = openSprite;
-            this.gameObject.tag = "Untagged";       // 关闭互动标识
-        }
     }
 
     public void TriggerAction()
@@ -63,24 +55,18 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
 
     public void GetSaveData(Data data)
     {
-        if(data.boolSaveDataDict.ContainsKey(GetDataID().ID))
+        if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
         {
-            data.boolSaveDataDict[GetDataID().ID] = this.isDone;
-            print("s");
+            data.boolSaveDataDict[GetDataID().ID + "Chest01"] = isDone;
         }
         else
         {
-            data.boolSaveDataDict.Add(GetDataID().ID, this.isDone);
-            print("s");
+            data.boolSaveDataDict.Add(GetDataID().ID+ "Chest01", isDone);
         }
     }
 
     public void LoadData(Data data)
     {
-        if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
-        {
-            this.isDone = data.boolSaveDataDict[GetDataID().ID];
-            print(isDone);
-        }
+        isDone = data.boolSaveDataDict[GetDataID().ID + "Chest01"];
     }
 }

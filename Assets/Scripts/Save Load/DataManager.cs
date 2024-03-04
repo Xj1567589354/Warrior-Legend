@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,13 @@ public class DataManager : MonoBehaviour
 {
     [Header("监听")]
     public VoidEventSO SaveDataEvent;
+    public PersistEventSO SavePersistEvent;
 
     public static DataManager instance;     // 单例模式
     private List<ISaveable> saveableList = new List<ISaveable>();       // 列表
 
     private Data saveData;
+    public GameObject chest;        // TDOO：第二场景的宝箱01，后序还需要添加其他宝箱和保存点
 
     private void Awake()
     {
@@ -38,11 +41,26 @@ public class DataManager : MonoBehaviour
     private void OnEnable()
     {
         SaveDataEvent.onEventRaised += Save;
+        SavePersistEvent.onEventRaised += SetAssetsActive;
     }
 
     private void OnDisable()
     {
         SaveDataEvent.onEventRaised -= Save;
+        SavePersistEvent.onEventRaised -= SetAssetsActive;
+    }
+
+    /// <summary>
+    /// 激活宝箱和保存点
+    /// </summary>
+    /// <param name="isdone">是否激活</param>
+    private void SetAssetsActive(bool isdone)
+    {
+        print(isdone);
+        if(isdone) {
+            chest.SetActive(true);
+        }
+        else { chest.SetActive(false); }
     }
 
     /// <summary>

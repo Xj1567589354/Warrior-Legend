@@ -110,14 +110,16 @@ public class SceneLoader : MonoBehaviour, ISaveable
             fadeEvent.FadeIn(fadeDurationTime);
         }
 
+        yield return currentLoadedScene.assetReference.UnLoadScene();        // 卸载场景
+        playerTrans.gameObject.SetActive(false);        // 关闭玩家
+
+        //TDOO:宝箱保持点关闭。目前只实现了宝箱
+        DataManager.instance.chest.SetActive(false);    
+
         yield return new WaitForSeconds(fadeDurationTime);
 
         // 广播事件调整血量显示
         sceneUnloadedEvent.RaiseLoadRequest(sceneToLoad, positionToGo, true);
-
-        yield return currentLoadedScene.assetReference.UnLoadScene();        // 卸载场景
-
-        playerTrans.gameObject.SetActive(false);        // 关闭玩家
 
         LoadNewScene();     // 加载新场景
     }
@@ -141,6 +143,10 @@ public class SceneLoader : MonoBehaviour, ISaveable
         playerTrans.position = positionToGo;    // 更新player坐标
 
         playerTrans.gameObject.SetActive(true);     // 打开玩家
+
+        //TDOO:宝箱保持点打开。目前只实现了宝箱
+        DataManager.instance.chest.SetActive(true);
+
         if (fadeSceen)
         {
             //TODO：变透明 
