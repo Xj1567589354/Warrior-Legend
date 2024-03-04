@@ -19,5 +19,6 @@ public class PersistAsset : MonoBehaviour
     private void OnDisable()
     {
         isDone = false;
+        SavePersistEvent.RaiseEvent(isDone);     // ¹ã²¥³öÈ¥
     }
 }

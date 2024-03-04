@@ -8,8 +8,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("监听事件")]
-    public SceneLoaderEventSO loadEvent;
+    public SceneLoaderEventSO sceneLoadEvent;       // 场景加载执行的事件
     public VoidEventSO afterSceneLoadedEvent;
+    public VoidEventSO loadDataEvent;               // 加载游戏进度所执行的事件
+    public VoidEventSO backToMenuEvent;             // 返回主菜单所执行的事件
 
     public PlayerInputControl inputAction;      //新输入系统
     private Rigidbody2D rb;
@@ -84,20 +86,25 @@ public class PlayerController : MonoBehaviour
 
         // 滑铲
         inputAction.Gameplay.Slide.started += Slide;
+
+        inputAction.Enable();
     }
 
     private void OnEnable()
     {
-        inputAction.Enable();
-        loadEvent.LoadRequestEvent += OnLoadEvent;
+        sceneLoadEvent.LoadRequestEvent += OnLoadEvent;
         afterSceneLoadedEvent.onEventRaised += OnAfterSceneLoadedEvent;
+        loadDataEvent.onEventRaised += OnLoadDataEvent;
+        backToMenuEvent.onEventRaised += OnLoadDataEvent;
     }
 
     private void OnDisable()
     {
         inputAction.Disable();
-        loadEvent.LoadRequestEvent -= OnLoadEvent;
+        sceneLoadEvent.LoadRequestEvent -= OnLoadEvent;
         afterSceneLoadedEvent.onEventRaised -= OnAfterSceneLoadedEvent;
+        loadDataEvent.onEventRaised -= OnLoadDataEvent;
+        backToMenuEvent.onEventRaised -= OnLoadDataEvent;
     }
 
     private void Update()
@@ -112,6 +119,14 @@ public class PlayerController : MonoBehaviour
         if(!isHurt&&!isAttack)
             //移动
             Move();
+    }
+
+    /// <summary>
+    /// 读取游戏进度
+    /// </summary>
+    private void OnLoadDataEvent()
+    {
+        isDead = false;
     }
 
     /// <summary>

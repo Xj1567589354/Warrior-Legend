@@ -16,6 +16,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
     [Header("事件监听")]
     public SceneLoaderEventSO loadEventSO;
     public VoidEventSO newGameEvent;
+    public VoidEventSO backToMenuEvent;     // 返回主菜单所执行的事件
 
     [Header("广播")]
     public VoidEventSO afterSceneLoadedEvent;
@@ -51,6 +52,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
     {
         loadEventSO.LoadRequestEvent += OnLoadRequestEvent;
         newGameEvent.onEventRaised += NewGame;
+        backToMenuEvent.onEventRaised += OnBackToMenuEvent;
 
         ISaveable saveable = this;
         saveable.RegisterSaveData();
@@ -60,9 +62,16 @@ public class SceneLoader : MonoBehaviour, ISaveable
     {
         loadEventSO.LoadRequestEvent -= OnLoadRequestEvent;
         newGameEvent.onEventRaised -= NewGame;
+        backToMenuEvent.onEventRaised -= OnBackToMenuEvent;
 
         ISaveable saveable = this;
         saveable.UnRegisterSaveData();
+    }
+
+    private void OnBackToMenuEvent()
+    {
+        sceneToLoad = menuScene;
+        loadEventSO.RaiseLoadRequest(sceneToLoad, menuPostion, true);
     }
 
     void NewGame()
@@ -114,7 +123,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         playerTrans.gameObject.SetActive(false);        // 关闭玩家
 
         //TDOO:宝箱保持点关闭。目前只实现了宝箱
-        DataManager.instance.chest.SetActive(false);    
+        //DataManager.instance.chest.SetActive(false);    
 
         yield return new WaitForSeconds(fadeDurationTime);
 
@@ -145,7 +154,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         playerTrans.gameObject.SetActive(true);     // 打开玩家
 
         //TDOO:宝箱保持点打开。目前只实现了宝箱
-        DataManager.instance.chest.SetActive(true);
+        //DataManager.instance.chest.SetActive(true);
 
         if (fadeSceen)
         {

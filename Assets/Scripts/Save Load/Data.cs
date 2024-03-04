@@ -25,7 +25,6 @@ public class Data
     public void SaveGameSceneToString(GameSceneSO saveScene)
     {
         sceneToLoad = JsonUtility.ToJson(saveScene);      // 将object类型转换为string类型
-        Debug.Log(sceneToLoad);
     }
 
     /// <summary>

@@ -10,6 +10,7 @@ public class DataManager : MonoBehaviour
     [Header("监听")]
     public VoidEventSO SaveDataEvent;
     public PersistEventSO SavePersistEvent;
+    public VoidEventSO loadDataEvent;
 
     public static DataManager instance;     // 单例模式
     private List<ISaveable> saveableList = new List<ISaveable>();       // 列表
@@ -31,23 +32,25 @@ public class DataManager : MonoBehaviour
 
     private void Update()
     {
-        // 按下L键实现加载数据
-        if (Keyboard.current.lKey.wasPressedThisFrame)
-        {
-            Load();
-        }
+        //// 按下L键实现加载数据
+        //if (Keyboard.current.lKey.wasPressedThisFrame)
+        //{
+        //    Load();
+        //}
     }
 
     private void OnEnable()
     {
         SaveDataEvent.onEventRaised += Save;
         SavePersistEvent.onEventRaised += SetAssetsActive;
+        loadDataEvent.onEventRaised += Load;
     }
 
     private void OnDisable()
     {
         SaveDataEvent.onEventRaised -= Save;
         SavePersistEvent.onEventRaised -= SetAssetsActive;
+        loadDataEvent.onEventRaised -= Load;
     }
 
     /// <summary>
@@ -56,11 +59,12 @@ public class DataManager : MonoBehaviour
     /// <param name="isdone">是否激活</param>
     private void SetAssetsActive(bool isdone)
     {
-        print(isdone);
         if(isdone) {
             chest.SetActive(true);
         }
-        else { chest.SetActive(false); }
+        else {
+            chest.SetActive(false);
+        }
     }
 
     /// <summary>

@@ -30,6 +30,7 @@ public class Charactor : MonoBehaviour, ISaveable
     public UnityEvent onDie;        // 死亡事件
 
 
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -81,9 +82,12 @@ public class Charactor : MonoBehaviour, ISaveable
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Water")){
-            currentHealth = 0;              // 当前血量设为0
-            onHealthChange?.Invoke(this);   // 更新血量
-            onDie?.Invoke();                // 死亡
+            if(currentHealth > 0)
+            {
+                currentHealth = 0;              // 当前血量设为0
+                onHealthChange?.Invoke(this);   // 更新血量
+                onDie?.Invoke();                // 死亡
+            }
         }
     }
 
