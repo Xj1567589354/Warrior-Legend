@@ -46,7 +46,7 @@ public class DataManager : MonoBehaviour
         loadDataEvent.onEventRaised += Load;
     }
 
-    private void OnDisable()
+    private void OnDisable() 
     {
         SaveDataEvent.onEventRaised -= Save;
         SavePersistEvent.onEventRaised -= SetAssetsActive;
