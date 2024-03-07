@@ -2453,7 +2453,7 @@ MonoBehaviour:
   impulseSource: {fileID: 804888385}
   afterSceneLoadedEvent: {fileID: 11400000, guid: d1e588a940634e341afb11f761937f32, type: 2}
   cameraEventShake: {fileID: 11400000, guid: f1aaede5ca0b223439421675db867b32, type: 2}
-  duration: 0
+  duration: 10
 --- !u!114 &1121111238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,7 +2633,14 @@ MonoBehaviour:
   SaveDataEvent: {fileID: 11400000, guid: a4e64d95b2a54324ab5432d8627ff9bf, type: 2}
   SavePersistEvent: {fileID: 11400000, guid: 5a1412a4025df7e4aa05b64a58ea1dfc, type: 2}
   loadDataEvent: {fileID: 11400000, guid: 05f95b67af136894c80b3d8485979d6b, type: 2}
+  currentGameScene: {fileID: 0}
+  Foreast: {fileID: 0}
+  Cave: {fileID: 0}
+  sceneLoader: {fileID: 0}
   chest: {fileID: 408481287}
+  caveSavePoint01: {fileID: 0}
+  forestSavePoint: {fileID: 0}
+  isPointDone: 0
 --- !u!4 &1448594608
 Transform:
   m_ObjectHideFlags: 0
@@ -2897,6 +2904,7 @@ MonoBehaviour:
   sceneUnloadedEvent: {fileID: 11400000, guid: 464bcb56128f36541a86acda5bea354b, type: 2}
   firstLoadScene: {fileID: 11400000, guid: 6207837a6a227514bb28f56bbcad97a0, type: 2}
   menuScene: {fileID: 11400000, guid: 661cab82247a1e94e9b415adaadc248d, type: 2}
+  currentLoadedScene: {fileID: 0}
   positionToGo: {x: 0, y: 0, z: 0}
   fadeDurationTime: 1.5
 --- !u!4 &1608431641

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [Header("组件")]
     [HideInInspector]public Rigidbody2D rb;
     [HideInInspector]public Animator animator;
+    private Animator hitAnimator;       // 子物体动画控制器
     [HideInInspector]public PhysicsCheck physicsCheck;
 
     [Header("基本参数")]
@@ -51,6 +52,7 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        hitAnimator = transform.GetChild(0).GetComponent<Animator>();
 
         currentSpeed = normalSpeed;
         physicsCheck = GetComponent<PhysicsCheck>();
@@ -174,6 +176,7 @@ public class Enemy : MonoBehaviour
         // 受伤被击退
         isHurt = true;
         animator.SetTrigger("hurt");
+        hitAnimator.SetTrigger("hurt");
         hurtDir = new Vector2(transform.position.x - attacker.position.x, 0).normalized;
         /*野猪受伤时将x轴上的力停下来，防止野猪原地受伤动画*/
         rb.velocity = new Vector2(0, rb.velocity.y);
