@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {   
-        if(!isHurt)
+        if(!isHurt&&!isAttack)
             //移动
             Move();
     }
@@ -148,55 +148,49 @@ public class PlayerController : MonoBehaviour
         inputAction.Gameplay.Enable();     // 启用输入系统
     }
 
+
     /// <summary>
     /// 人物移动
     /// </summary>
     public void Move()
     {
-        if (!isAttack)
+        // 下蹲时禁止移动
+        if (!isCrouch && !walkJump)
         {
-            // 下蹲时禁止移动
-            if (!isCrouch && !walkJump)
-            {
-                if (isRun == false)
-                    // 人物步行速度设置
-                    rb.velocity = new Vector2(inputDirection.x * walkSpeed * Time.deltaTime, rb.velocity.y);
-                else
-                    // 人物跑步速度设置
-                    rb.velocity = new Vector2(inputDirection.x * runSpeed * Time.deltaTime, rb.velocity.y);
-            }
-
-            // 初始化人物当前面向，数值为1
-            faceDir = (int)transform.localScale.x;
-
-            if (inputDirection.x > 0)
-                faceDir = 1;
-            else if (inputDirection.x < 0)
-                faceDir = -1;
-
-            // 人物翻转
-            transform.localScale = new Vector3(faceDir, 1, 1);
-
-            #region 人物下蹲
-            isCrouch = inputDirection.y < -0.5f && physicsCheck.isGround;
-            if (isCrouch)
-            {
-                // 修改碰撞体位置和大小
-                coll.offset = new Vector2(-0.07f, 0.85f);
-                coll.size = new Vector2(0.6f, 1.7f);
-            }
+            if (isRun == false)
+                // 人物步行速度设置
+                rb.velocity = new Vector2(inputDirection.x * walkSpeed * Time.deltaTime, rb.velocity.y);
             else
-            {
-                // 还原初始碰撞体参数
-                coll.offset = originOffset;
-                coll.size = originSize;
-            }
-            #endregion
+                // 人物跑步速度设置
+                rb.velocity = new Vector2(inputDirection.x * runSpeed * Time.deltaTime, rb.velocity.y);
+        }
+
+        // 初始化人物当前面向，数值为1
+        faceDir = (int)transform.localScale.x;
+
+        if (inputDirection.x > 0)
+            faceDir = 1;
+        else if(inputDirection.x < 0)     
+            faceDir = -1;
+
+        // 人物翻转
+        transform.localScale = new Vector3(faceDir, 1, 1);
+
+        #region 人物下蹲
+        isCrouch = inputDirection.y < -0.5f && physicsCheck.isGround;
+        if (isCrouch) 
+        {
+            // 修改碰撞体位置和大小
+            coll.offset = new Vector2(-0.07f, 0.85f);
+            coll.size = new Vector2(0.6f, 1.7f);
         }
         else
         {
-            rb.velocity = new Vector2(transform.localScale.x * 0.8f, rb.velocity.y);
+            // 还原初始碰撞体参数
+            coll.offset = originOffset;
+            coll.size = originSize;
         }
+        #endregion
     }
 
     /// <summary>

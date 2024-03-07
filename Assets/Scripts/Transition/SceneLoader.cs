@@ -28,7 +28,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
     public GameSceneSO menuScene;           // 菜单
 
     private GameSceneSO sceneToLoad;            // 需要加载的场景
-    private GameSceneSO currentLoadedScene;     // 当前加载的场景
+    public GameSceneSO currentLoadedScene;     // 当前加载的场景
     public Vector3 positionToGo;
     private bool fadeSceen;
     private bool isLoading;     // 是否正在加载

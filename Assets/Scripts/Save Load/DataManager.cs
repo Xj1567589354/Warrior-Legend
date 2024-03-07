@@ -11,12 +11,21 @@ public class DataManager : MonoBehaviour
     public VoidEventSO SaveDataEvent;
     public PersistEventSO SavePersistEvent;
     public VoidEventSO loadDataEvent;
+    public GameSceneSO currentGameScene;
+
+    public GameSceneSO Foreast;
+    public GameSceneSO Cave;
 
     public static DataManager instance;     // 单例模式
     private List<ISaveable> saveableList = new List<ISaveable>();       // 列表
+    public SceneLoader sceneLoader;
 
     private Data saveData;
     public GameObject chest;        // TDOO：第二场景的宝箱01，后序还需要添加其他宝箱和保存点
+    public GameObject caveSavePoint01;
+    public GameObject forestSavePoint;
+
+    public bool isPointDone;
 
     private void Awake()
     {
@@ -32,10 +41,33 @@ public class DataManager : MonoBehaviour
 
     private void Update()
     {
-        //// 按下L键实现加载数据
-        //if (Keyboard.current.lKey.wasPressedThisFrame)
+        //currentGameScene = sceneLoader.currentLoadedScene;
+
+        //if (isPointDone)
         //{
-        //    Load();
+        //    if (currentGameScene == Foreast)
+        //    {
+        //        forestSavePoint.SetActive(true);
+        //        caveSavePoint01.SetActive(false);
+        //    }
+        //    if (currentGameScene == Cave)
+        //    {
+        //        chest.SetActive(true);
+        //        caveSavePoint01.SetActive(true);
+        //        forestSavePoint.SetActive(false);
+        //    }
+        //}
+        //else
+        //{
+        //    if (currentGameScene == Foreast)
+        //    {
+        //        forestSavePoint.SetActive(false);
+        //    }
+        //    if (currentGameScene == Cave)
+        //    {
+        //        chest.SetActive(false);
+        //        caveSavePoint01.SetActive(false);
+        //    }
         //}
     }
 
@@ -46,7 +78,7 @@ public class DataManager : MonoBehaviour
         loadDataEvent.onEventRaised += Load;
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
         SaveDataEvent.onEventRaised -= Save;
         SavePersistEvent.onEventRaised -= SetAssetsActive;
@@ -59,12 +91,7 @@ public class DataManager : MonoBehaviour
     /// <param name="isdone">是否激活</param>
     private void SetAssetsActive(bool isdone)
     {
-        if(isdone) {
-            chest.SetActive(true);
-        }
-        else {
-            chest.SetActive(false);
-        }
+        isPointDone = isdone;
     }
 
     /// <summary>
@@ -115,5 +142,7 @@ public class DataManager : MonoBehaviour
         {
             saveable.LoadData(saveData);        // 加载每一个saveable资产的坐标数据
         }
+
+        currentGameScene = sceneLoader.currentLoadedScene;
     }
 }

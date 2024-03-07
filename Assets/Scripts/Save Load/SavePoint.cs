@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class SavePoint : MonoBehaviour, Iinteractable
+public class SavePoint : MonoBehaviour, Iinteractable, ISaveable
 {
     [Header("广播")]
     public VoidEventSO SaveDataEvent;
@@ -20,7 +21,24 @@ public class SavePoint : MonoBehaviour, Iinteractable
     private void OnEnable()
     {
         spriteRenderer.sprite = isDone ? lightSprite : darkSprite;
+        this.gameObject.tag = isDone ? "Untagged" : "Interactable";
         lightObj.SetActive(isDone);
+
+        ISaveable saveable = this;
+        saveable.RegisterSaveData();
+    }
+
+    private void Update()
+    {
+        spriteRenderer.sprite = isDone ? lightSprite : darkSprite;
+        this.gameObject.tag = isDone ? "Untagged" : "Interactable";
+        lightObj.SetActive(isDone);
+    }
+
+    private void OnDisable()
+    {
+        ISaveable saveable = this;
+        saveable.UnRegisterSaveData();
     }
 
     public void TriggerAction()
@@ -36,5 +54,28 @@ public class SavePoint : MonoBehaviour, Iinteractable
 
             this.gameObject.tag = "Untagged";       // 取消二次互动
         }
+    }
+
+    public DataDefinition GetDataID()
+    {
+        return GetComponent<DataDefinition>();
+    }
+
+    public void GetSaveData(Data data)
+    {
+        //if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
+        //{
+        //    data.boolSaveDataDict[GetDataID().ID] = isDone;
+        //}
+        //else
+        //    data.boolSaveDataDict.Add(GetDataID().ID, isDone);
+        //print("SavePoint");
+    }
+
+    public void LoadData(Data data)
+    {
+        //if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
+        //    this.isDone = data.boolSaveDataDict[GetDataID().ID];
+        //print("LoadPoint");
     }
 }

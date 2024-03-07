@@ -7,10 +7,8 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    [Header("组件")]
     private CinemachineConfiner2D confiner2D;
     public CinemachineImpulseSource impulseSource;
-    public static CameraControl instance;
 
 
     [Header("监听")]
@@ -19,19 +17,10 @@ public class CameraControl : MonoBehaviour
     // 监听摄像机振动
     public VoidEventSO cameraEventShake;
 
-    [Header("基础参数")]
-    public float duration;
-    
-
 
     private void Awake()
     {
         confiner2D = GetComponent<CinemachineConfiner2D>();
-        
-        if(instance == null )
-            instance = this;
-        else
-            Destroy( this.gameObject );
     }
 
     private void OnEnable()
@@ -53,30 +42,7 @@ public class CameraControl : MonoBehaviour
 
     private void OnCameraShakeEvent()
     {
-        // 震动
         impulseSource.GenerateImpulse();
-
-        //// 停顿
-        //StartCoroutine(TimePause(duration));
-    }
-
-    public void StartPause()
-    {
-        StartCoroutine(TimePause(duration));
-    }
-
-
-    /// <summary>
-    /// 停顿
-    /// </summary>
-    /// <param name="durtation">停顿时间</param>
-    /// <returns></returns>
-    IEnumerator TimePause(float durtation)
-    {
-        float pauseTime = durtation / 60f;      // 停顿时间
-        Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(pauseTime);
-        Time.timeScale = 1;
     }
 
     //// 场景切换后更改

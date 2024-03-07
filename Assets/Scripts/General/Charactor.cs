@@ -103,6 +103,7 @@ public class Charactor : MonoBehaviour, ISaveable
 
             //执行受伤
             onTakeDamage?.Invoke(attacker.transform);
+
             TriggerInvulneral();    // 开启无敌
         }
         else
