@@ -9,16 +9,17 @@ public class PersistAsset : MonoBehaviour
 
     [Header("广播")]
     public PersistEventSO SavePersistEvent;
+    public GameSceneSO gameScene;
 
     private void OnEnable()
     {
         isDone = true;
-        SavePersistEvent.RaiseEvent(isDone);     // 广播出去
+        SavePersistEvent.RaiseEvent(isDone, gameScene);     // 广播出去
     }
 
     private void OnDisable()
     {
         isDone = false;
-        SavePersistEvent.RaiseEvent(isDone);     // 广播出去
+        SavePersistEvent.RaiseEvent(isDone, gameScene);     // 广播出去
     }
 }

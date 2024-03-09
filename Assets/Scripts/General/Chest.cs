@@ -5,7 +5,7 @@ using System.Security.Permissions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Chest : MonoBehaviour, Iinteractable
+public class Chest : MonoBehaviour, Iinteractable, ISaveable
 {
     public Sprite openSprite;
     public Sprite closeSprite;
@@ -21,20 +21,20 @@ public class Chest : MonoBehaviour, Iinteractable
     {
         spriteRenderer.sprite = isDone ? openSprite : closeSprite;      // 根据isDone状态来更换chest图片
 
-        //ISaveable saveable = this;
-        //saveable.RegisterSaveData();
+        ISaveable saveable = this;
+        saveable.RegisterSaveData();
     }
 
     private void Update()
     {
-        if(!isDone)
-            this.gameObject.tag = "Interactable";       // 关闭互动标识
+        spriteRenderer.sprite = isDone ? openSprite : closeSprite;
+        this.gameObject.tag = isDone ? "Untagged" : "Interactable";
     }
 
     private void OnDisable()
     {
-        //ISaveable saveable = this;
-        //saveable.UnRegisterSaveData();
+        ISaveable saveable = this;
+        saveable.UnRegisterSaveData();
     }
 
     public void TriggerAction()
@@ -54,29 +54,28 @@ public class Chest : MonoBehaviour, Iinteractable
         this.gameObject.tag = "Untagged";       // 关闭互动标识
     }
 
-    //public DataDefinition GetDataID()
-    //{
-    //    return GetComponent<DataDefinition>();
-    //}
+    public DataDefinition GetDataID()
+    {
+        return GetComponent<DataDefinition>();
+    }
 
-    //public void GetSaveData(Data data)
-    //{
-    //    if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
-    //    {
-    //        data.boolSaveDataDict[GetDataID().ID + "Chest01isDone"] = isDone;
-    //    }
-    //    else
-    //    {
-    //        data.boolSaveDataDict.Add(GetDataID().ID + "Chest01isDone", isDone);
-    //    }
-    //    print(data.boolSaveDataDict[GetDataID().ID + "Chest01isDone"]);
-    //}
+    public void GetSaveData(Data data)
+    {
+        if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
+        {
+            data.boolSaveDataDict[GetDataID().ID] = isDone;
+        }
+        else
+        {
+            data.boolSaveDataDict.Add(GetDataID().ID, isDone);
+        }
+    }
 
-    //public void LoadData(Data data)
-    //{
-    //    if(data.boolSaveDataDict.ContainsKey(GetDataID().ID + "Chest01isDone"))
-    //    {
-    //        isDone = data.boolSaveDataDict[GetDataID().ID + "Chest01isDone"];
-    //    }
-    //}
+    public void LoadData(Data data)
+    {
+        if(data.boolSaveDataDict.ContainsKey(GetDataID().ID))
+        {
+            isDone = data.boolSaveDataDict[GetDataID().ID];
+        }
+    }
 }

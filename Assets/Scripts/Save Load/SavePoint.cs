@@ -47,10 +47,10 @@ public class SavePoint : MonoBehaviour, Iinteractable, ISaveable
         {
             isDone = true;
             spriteRenderer.sprite = lightSprite;
-            lightObj.SetActive(true);
+            lightObj.SetActive(isDone);
 
             // 呼叫保存数据
-            SaveDataEvent.RasieEvent();     
+            SaveDataEvent.RasieEvent(); 
 
             this.gameObject.tag = "Untagged";       // 取消二次互动
         }
@@ -63,19 +63,18 @@ public class SavePoint : MonoBehaviour, Iinteractable, ISaveable
 
     public void GetSaveData(Data data)
     {
-        //if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
-        //{
-        //    data.boolSaveDataDict[GetDataID().ID] = isDone;
-        //}
-        //else
-        //    data.boolSaveDataDict.Add(GetDataID().ID, isDone);
-        //print("SavePoint");
+        if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
+        {
+            data.boolSaveDataDict[GetDataID().ID] = isDone;
+        }
+        else
+            data.boolSaveDataDict.Add(GetDataID().ID, isDone);
     }
 
     public void LoadData(Data data)
     {
-        //if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
-        //    this.isDone = data.boolSaveDataDict[GetDataID().ID];
-        //print("LoadPoint");
+        if (data.boolSaveDataDict.ContainsKey(GetDataID().ID))
+            this.isDone = data.boolSaveDataDict[GetDataID().ID];
+        print("LoadPoint");
     }
 }

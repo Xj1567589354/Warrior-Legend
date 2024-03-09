@@ -6,10 +6,10 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Event/PersistentEventSO")]
 public class PersistEventSO : ScriptableObject
 {
-    public UnityAction<bool> onEventRaised;
+    public UnityAction<bool, GameSceneSO> onEventRaised;
 
-    public void RaiseEvent(bool isbool)
+    public void RaiseEvent(bool isbool, GameSceneSO nextScene)
     {
-        onEventRaised?.Invoke(isbool);
+        onEventRaised?.Invoke(isbool, nextScene);
     }
 }
