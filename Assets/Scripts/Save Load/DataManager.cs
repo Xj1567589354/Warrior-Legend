@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,7 @@ public class DataManager : MonoBehaviour
     public SceneLoader sceneLoader;
 
     private Data saveData;
+    public int count;
 
     [Header("Cave场景资产")]
     public GameObject c_Chest;        // TDOO：第二场景的宝箱01，后序还需要添加其他宝箱和保存点
@@ -100,7 +102,6 @@ public class DataManager : MonoBehaviour
         // 保证保存点开启时，在此保存点前面的保存点也是开启状态
         if (caveSP.isDone)
             forestSP.isDone = true;
-        
     }
 
     private void OnEnable()
@@ -159,11 +160,6 @@ public class DataManager : MonoBehaviour
         {
             saveable.GetSaveData(saveData);     // 保存每一个saveable资产的坐标数据
         }
-
-        //foreach (var item in saveData.characterPosDict)
-        //{
-        //    Debug.Log(item.Key + "   "+ item.Value);
-        //}
     }
 
     /// <summary>

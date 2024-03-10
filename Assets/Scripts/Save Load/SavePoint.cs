@@ -53,6 +53,8 @@ public class SavePoint : MonoBehaviour, Iinteractable, ISaveable
             SaveDataEvent.RasieEvent(); 
 
             this.gameObject.tag = "Untagged";       // 取消二次互动
+
+            DataManager.instance.count++;
         }
     }
 
