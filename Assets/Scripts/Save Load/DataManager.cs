@@ -16,6 +16,7 @@ public class DataManager : MonoBehaviour
 
     public GameSceneSO Foreast;
     public GameSceneSO Cave;
+    public GameSceneSO Houce;
 
     public static DataManager instance;     // 单例模式
     private List<ISaveable> saveableList = new List<ISaveable>();       // 列表
@@ -23,6 +24,8 @@ public class DataManager : MonoBehaviour
 
     private Data saveData;
     public int count;
+    public SavePoint forestSP;
+    public SavePoint caveSP;
 
     [Header("Cave场景资产")]
     public GameObject c_Chest;        // TDOO：第二场景的宝箱01，后序还需要添加其他宝箱和保存点
@@ -37,8 +40,9 @@ public class DataManager : MonoBehaviour
     public GameObject f_Chest02;
     public GameObject forestSavePoint;
 
-    public SavePoint forestSP;
-    public SavePoint caveSP;
+    [Header("Houce场景资产")]
+    public GameObject h_Chest;
+    public GameObject houceSavePoint;
 
     [Header("状态")]
     public bool isPointDone;
@@ -79,6 +83,11 @@ public class DataManager : MonoBehaviour
                 caveSavePoint03.SetActive(true);
                 forestSavePoint.SetActive(false);
             }
+            if (currentGameScene == Houce)
+            {
+                h_Chest.SetActive(true);
+                houceSavePoint.SetActive(true);
+            }
         }
         else
         {
@@ -96,6 +105,11 @@ public class DataManager : MonoBehaviour
                 caveSavePoint01.SetActive(false);
                 caveSavePoint02.SetActive(false);
                 caveSavePoint03.SetActive(false);
+            }
+            if (currentGameScene == Houce)
+            {
+                h_Chest.SetActive(false);
+                houceSavePoint.SetActive(false);
             }
         }
 
