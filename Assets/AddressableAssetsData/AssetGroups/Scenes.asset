@@ -38,7 +38,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9d2b6b7da5ffc1243997937aab4aeadd
-    m_Address: Assets/Scenes/Scene3.unity
+    m_Address: Scene3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc38f8f02f1b628468617ee11c6397d9
+    m_Address: Hive
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
