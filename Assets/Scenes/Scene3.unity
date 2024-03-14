@@ -1199,6 +1199,7 @@ MonoBehaviour:
   isDone: 0
   SavePersistEvent: {fileID: 11400000, guid: 5a1412a4025df7e4aa05b64a58ea1dfc, type: 2}
   gameScene: {fileID: 11400000, guid: a5c7a0212ffee2643bec5df5ff5fd9ad, type: 2}
+  foreastTPSet: {fileID: 11400000, guid: dc2834166745d8c43a10ebd1344745d6, type: 2}
 --- !u!4 &333043715
 Transform:
   m_ObjectHideFlags: 0
@@ -15518,8 +15519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadEventSO: {fileID: 11400000, guid: a1776773be72ab3408d1b85f4345184b, type: 2}
-  sceneToGo: {fileID: 11400000, guid: 6207837a6a227514bb28f56bbcad97a0, type: 2}
-  positionToGo: {x: 70.6, y: -3.8, z: 0}
+  sceneToGo: {fileID: 11400000, guid: ea213357f3f09394caee2fd1c277242d, type: 2}
+  positionToGo: {x: 116.61, y: 31.07, z: 0}
   saveDataEvent: {fileID: 11400000, guid: a4e64d95b2a54324ab5432d8627ff9bf, type: 2}
 --- !u!4 &1894113041
 Transform:

@@ -22,7 +22,8 @@ public class SavePoint : MonoBehaviour, Iinteractable, ISaveable
     {
         spriteRenderer.sprite = isDone ? lightSprite : darkSprite;
         this.gameObject.tag = isDone ? "Untagged" : "Interactable";
-        lightObj.SetActive(isDone);
+        if (DataManager.instance.currentGameScene == DataManager.instance.Cave)
+            lightObj.SetActive(isDone);
 
         ISaveable saveable = this;
         saveable.RegisterSaveData();
@@ -32,7 +33,8 @@ public class SavePoint : MonoBehaviour, Iinteractable, ISaveable
     {
         spriteRenderer.sprite = isDone ? lightSprite : darkSprite;
         this.gameObject.tag = isDone ? "Untagged" : "Interactable";
-        lightObj.SetActive(isDone);
+        if (DataManager.instance.currentGameScene == DataManager.instance.Cave)
+            lightObj.SetActive(isDone);
     }
 
     private void OnDisable()
@@ -47,7 +49,8 @@ public class SavePoint : MonoBehaviour, Iinteractable, ISaveable
         {
             isDone = true;
             spriteRenderer.sprite = lightSprite;
-            lightObj.SetActive(isDone);
+            if (DataManager.instance.currentGameScene == DataManager.instance.Cave)
+                lightObj.SetActive(isDone);
 
             // ºô½Ð±£´æÊý¾Ý
             SaveDataEvent.RasieEvent(); 

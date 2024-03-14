@@ -13,10 +13,12 @@ public class DataManager : MonoBehaviour
     public PersistEventSO SavePersistEvent;
     public VoidEventSO loadDataEvent;
     public GameSceneSO currentGameScene;
+    public ForeastTPSetSO foreastTPSet;
 
     public GameSceneSO Foreast;
     public GameSceneSO Cave;
     public GameSceneSO Houce;
+    public GameSceneSO Hive;
 
     public static DataManager instance;     // 单例模式
     private List<ISaveable> saveableList = new List<ISaveable>();       // 列表
@@ -39,13 +41,25 @@ public class DataManager : MonoBehaviour
     public GameObject f_Chest;
     public GameObject f_Chest02;
     public GameObject forestSavePoint;
+    public GameObject telepoint;
 
     [Header("Houce场景资产")]
     public GameObject h_Chest;
     public GameObject houceSavePoint;
 
+    [Header("Hive场景资产")]
+    public GameObject hive_Chest;
+    public GameObject hive_Chest02;
+    public GameObject hive_Chest03;
+    public GameObject hive_Chest04;
+    public GameObject hive_Chest05;
+    public GameObject hive_Chest06;
+    public GameObject hiveSavePoint;
+    public GameObject hiveSavePoint02;
+
     [Header("状态")]
     public bool isPointDone;
+    public bool isBoss;
 
     private void Awake()
     {
@@ -88,6 +102,18 @@ public class DataManager : MonoBehaviour
                 h_Chest.SetActive(true);
                 houceSavePoint.SetActive(true);
             }
+            if (currentGameScene == Hive)
+            {
+                hive_Chest.SetActive(true);
+                hive_Chest02.SetActive(true);
+                hive_Chest03.SetActive(true);
+                hive_Chest04.SetActive(true);
+                hive_Chest05.SetActive(true);
+                hive_Chest06.SetActive(true);
+                hiveSavePoint.SetActive(true);
+                hiveSavePoint02.SetActive(true);
+                isBoss = true;
+            }
         }
         else
         {
@@ -111,6 +137,17 @@ public class DataManager : MonoBehaviour
                 h_Chest.SetActive(false);
                 houceSavePoint.SetActive(false);
             }
+            if (currentGameScene == Hive)
+            {
+                hive_Chest.SetActive(false);
+                hive_Chest02.SetActive(false);
+                hive_Chest03.SetActive(false);
+                hive_Chest04.SetActive(false);
+                hive_Chest05.SetActive(false);
+                hive_Chest06.SetActive(false);
+                hiveSavePoint.SetActive(false);
+                hiveSavePoint02.SetActive(false);
+            }
         }
 
         // 保证保存点开启时，在此保存点前面的保存点也是开启状态
@@ -123,6 +160,7 @@ public class DataManager : MonoBehaviour
         SaveDataEvent.onEventRaised += Save;
         SavePersistEvent.onEventRaised += SetAssetsActive;
         loadDataEvent.onEventRaised += Load;
+        foreastTPSet.onEventRaised += SetForeastTP;
     }
 
     private void OnDisable()
@@ -130,6 +168,17 @@ public class DataManager : MonoBehaviour
         SaveDataEvent.onEventRaised -= Save;
         SavePersistEvent.onEventRaised -= SetAssetsActive;
         loadDataEvent.onEventRaised -= Load;
+        foreastTPSet.onEventRaised -= SetForeastTP;
+    }
+
+    /// <summary>
+    /// 激活Foreast场景的TelePoint2
+    /// </summary>
+    /// <exception cref="NotImplementedException"></exception>
+    private void SetForeastTP()
+    {
+        telepoint.SetActive(true);
+
     }
 
     /// <summary>
