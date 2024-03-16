@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,14 +11,24 @@ public class PlayerStatBar : MonoBehaviour
     public Image powerImage;            // 能量条
 
     public float delaySpeed = 3;           // 延迟速度
-
     public bool isRecovering;       // 恢复状态
 
     private Charactor currentCharactor;     // 当前角色
 
+    public int startCoinQuantity;
+    public TextMeshProUGUI coinQuantity;
+    public static int currentCoinQuantity;
+
+
+    private void Start()
+    {
+        currentCoinQuantity = startCoinQuantity;
+    }
 
     private void Update()
     {
+        coinQuantity.text = currentCoinQuantity.ToString();
+
         if(healthDelayImage.fillAmount > healthImage.fillAmount)
         {
             healthDelayImage.fillAmount -= Time.deltaTime * delaySpeed;

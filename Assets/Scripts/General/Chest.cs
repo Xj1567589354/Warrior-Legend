@@ -11,6 +11,8 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
     public Sprite closeSprite;
     private SpriteRenderer spriteRenderer;
     public bool isDone;
+    public GameObject coin;
+    public float delayTime;
 
     private void Awake()
     {
@@ -50,8 +52,14 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
     {
         spriteRenderer.sprite = openSprite;
         isDone = true;
-
         this.gameObject.tag = "Untagged";       // 关闭互动标识
+
+        Invoke("GetCoin", delayTime);
+    }
+
+    void GetCoin()
+    {
+        Instantiate(coin, transform.position, Quaternion.identity);
     }
 
     public DataDefinition GetDataID()

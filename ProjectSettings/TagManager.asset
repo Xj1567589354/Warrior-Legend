@@ -17,8 +17,8 @@ TagManager:
   - Ground
   - Player
   - Enemy
-  - 
-  - 
+  - Item
+  - TriggerBox
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Front
     uniqueID: 1260703191
+    locked: 0
+  - name: Item
+    uniqueID: 3757082453
     locked: 0

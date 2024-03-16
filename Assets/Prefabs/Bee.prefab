@@ -40,7 +40,7 @@ Transform:
   - {fileID: 5550690261374682880}
   - {fileID: 4956696734611066001}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1310844681186664961
 SpriteRenderer:
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1260703191
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 6
   m_Sprite: {fileID: -1027320614, guid: baa8df18d6af492468d175a16c0a1a64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -223,6 +223,8 @@ MonoBehaviour:
   hurtForce: 3
   faceDir: {x: 0, y: 0, z: 0}
   hurtDir: {x: 0, y: 0}
+  coin: {fileID: 5130982200739110004, guid: 4a5f446fb3c6a284fb23d1a7adcb0779, type: 3}
+  delayTime: 0
   attacker: {fileID: 0}
   spwanPoint: {x: 0, y: 0, z: 0}
   waitTime: 2
@@ -502,7 +504,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1260703191
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 6
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

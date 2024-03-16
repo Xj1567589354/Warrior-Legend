@@ -102,6 +102,8 @@ MonoBehaviour:
   openSprite: {fileID: -222537286, guid: a1825877f1bb9c043bd03510a23cd973, type: 3}
   closeSprite: {fileID: -282067780, guid: a1825877f1bb9c043bd03510a23cd973, type: 3}
   isDone: 0
+  coin: {fileID: 5130982200739110004, guid: 4a5f446fb3c6a284fb23d1a7adcb0779, type: 3}
+  delayTime: 0.15
 --- !u!61 &5115419893108408620
 BoxCollider2D:
   m_ObjectHideFlags: 0

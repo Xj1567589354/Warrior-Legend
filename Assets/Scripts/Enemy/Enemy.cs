@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
     public float hurtForce;     // 受伤力
     [HideInInspector] public Vector3 faceDir;     // 面朝方向
     [HideInInspector] public Vector2 hurtDir;     // 受伤方向
+    public GameObject coin;     // 掉落金币
+    public float delayTime;     // 掉落延迟时间
 
     public Transform attacker;  // 攻击者
     public Vector3 spwanPoint;  // 蜜蜂初始生成点
@@ -208,6 +210,7 @@ public class Enemy : MonoBehaviour
 
     public void OnDestroyAfterAnimation()
     {
+        Instantiate(coin, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
     #endregion
