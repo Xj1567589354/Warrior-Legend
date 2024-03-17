@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
 
     public Transform attacker;  // 攻击者
     public Vector3 spwanPoint;  // 蜜蜂初始生成点
+    public EnemyNumbers enemyNumbers;       // list列表
 
     [Header("计时器")]
     public float waitTime;      // 等待时间
@@ -62,6 +63,8 @@ public class Enemy : MonoBehaviour
         // 初始化计时器
         // waitTimeCounter = waitTime;
         spwanPoint = transform.position;
+
+        enemyNumbers = this.gameObject.GetComponentInParent<EnemyNumbers>();
     }
 
     private void OnEnable()
@@ -211,6 +214,7 @@ public class Enemy : MonoBehaviour
     public void OnDestroyAfterAnimation()
     {
         Instantiate(coin, transform.position, Quaternion.identity);
+        enemyNumbers.enemyList.Remove(this.gameObject);
         Destroy(this.gameObject);
     }
     #endregion

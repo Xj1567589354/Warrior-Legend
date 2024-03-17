@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class TeleportPoint : MonoBehaviour, Iinteractable
     public GameSceneSO sceneToGo;       // 传送的场景
     public Vector3 positionToGo;        // 传送的位置
     public VoidEventSO saveDataEvent;
+
+    public bool isTeleEnable;       // 是否开启传送点开关
+    public GameObject telepoint;
 
     public void TriggerAction()
     {
@@ -20,6 +24,18 @@ public class TeleportPoint : MonoBehaviour, Iinteractable
     {
         StartCoroutine(SaveCaveScene());
     }
+    //private void Update()
+    //{
+    //    if (isTeleEnable)
+    //    {
+    //        if (coinNums >= 5 && this.gameObject.tag == "Untagged")
+    //        {
+    //            this.gameObject.tag = "Interactable";
+    //            print("s");
+    //        }
+    //    }
+    //}
+
 
     public IEnumerator SaveCaveScene()
     {
@@ -32,4 +48,9 @@ public class TeleportPoint : MonoBehaviour, Iinteractable
             print("Save!!!");
         }
     }
+
+    //private void GetCoinNums(int _coinNums)
+    //{
+    //    this.coinNums = _coinNums;
+    //}
 }

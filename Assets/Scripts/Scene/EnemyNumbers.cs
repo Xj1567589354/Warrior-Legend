@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyNumbers : MonoBehaviour
 {
@@ -8,16 +10,15 @@ public class EnemyNumbers : MonoBehaviour
     private Transform enemyFa;      // 所有敌人父对象
     public GameObject telePoint;    // 传送点
 
-    private void Awake()
-    {
-
-    }
+    public GameObject CenterBottomUI;
+    public bool istelepoint;
 
     private void OnEnable()
     {
         enemyFa = this.transform;
         UpdataChildList();
     }
+
 
     public void UpdataChildList()
     {
@@ -34,11 +35,18 @@ public class EnemyNumbers : MonoBehaviour
 
     private void Update()
     {
-        if (enemyList.Count > 0)
+        if (enemyList.Count <= 0 && !istelepoint)
         {
-            UpdataChildList();      // 更新列表
+            istelepoint = true;
+            telePoint.SetActive(true);
+            StartCoroutine(SetCBUI());      // 3s关闭UI
         }
-        else
-            telePoint.tag = "Interactable";
+    }
+
+    IEnumerator SetCBUI()
+    {
+        CenterBottomUI.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        CenterBottomUI.SetActive(false);
     }
 }

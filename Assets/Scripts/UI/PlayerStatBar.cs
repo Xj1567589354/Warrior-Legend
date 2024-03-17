@@ -19,7 +19,6 @@ public class PlayerStatBar : MonoBehaviour
     public TextMeshProUGUI coinQuantity;
     public static int currentCoinQuantity;
 
-
     private void Start()
     {
         currentCoinQuantity = startCoinQuantity;
