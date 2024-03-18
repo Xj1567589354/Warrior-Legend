@@ -550,8 +550,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7483de1c25a641f498f551df94361dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadEvent: {fileID: 11400000, guid: a1776773be72ab3408d1b85f4345184b, type: 2}
+  sceneLoadEvent: {fileID: 0}
   afterSceneLoadedEvent: {fileID: 11400000, guid: d1e588a940634e341afb11f761937f32, type: 2}
+  loadDataEvent: {fileID: 0}
+  backToMenuEvent: {fileID: 0}
   inputDirection: {x: 0, y: 0}
   walkSpeed: 290
   runSpeed: 490
@@ -620,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameEvent: {fileID: 11400000, guid: 2e1185d4c6e2c874fb6eb5ff9f42feea, type: 2}
+  boolEvent: {fileID: 11400000, guid: 7209e090f0bc32343813ec1a28cd40e2, type: 2}
   isPlayer: 1
   maxHealth: 100
   currentHealth: 0

@@ -1293,7 +1293,6 @@ MonoBehaviour:
   loadEventSO: {fileID: 11400000, guid: a1776773be72ab3408d1b85f4345184b, type: 2}
   sceneToGo: {fileID: 11400000, guid: 266ba061fa35a90449a20d5c0e736ea4, type: 2}
   positionToGo: {x: 37.58, y: -34.97, z: 0}
-  saveDataEvent: {fileID: 11400000, guid: a4e64d95b2a54324ab5432d8627ff9bf, type: 2}
 --- !u!4 &838526986
 Transform:
   m_ObjectHideFlags: 0
@@ -14920,6 +14919,67 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1795975667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478618768606171311, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138959949644707491, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
+      propertyPath: m_Name
+      value: FirstSave
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba7e7efc2850e5b4a890bc2356c14ae6, type: 3}
 --- !u!1 &1805896919
 GameObject:
   m_ObjectHideFlags: 0
@@ -15521,7 +15581,6 @@ MonoBehaviour:
   loadEventSO: {fileID: 11400000, guid: a1776773be72ab3408d1b85f4345184b, type: 2}
   sceneToGo: {fileID: 11400000, guid: ea213357f3f09394caee2fd1c277242d, type: 2}
   positionToGo: {x: 116.61, y: 31.07, z: 0}
-  saveDataEvent: {fileID: 11400000, guid: a4e64d95b2a54324ab5432d8627ff9bf, type: 2}
 --- !u!4 &1894113041
 Transform:
   m_ObjectHideFlags: 0
@@ -15615,7 +15674,6 @@ MonoBehaviour:
   loadEventSO: {fileID: 11400000, guid: a1776773be72ab3408d1b85f4345184b, type: 2}
   sceneToGo: {fileID: 11400000, guid: a5c7a0212ffee2643bec5df5ff5fd9ad, type: 2}
   positionToGo: {x: -19.27, y: 16.63, z: 0}
-  saveDataEvent: {fileID: 11400000, guid: a4e64d95b2a54324ab5432d8627ff9bf, type: 2}
 --- !u!4 &2060185236
 Transform:
   m_ObjectHideFlags: 0
@@ -15709,7 +15767,6 @@ MonoBehaviour:
   loadEventSO: {fileID: 11400000, guid: a1776773be72ab3408d1b85f4345184b, type: 2}
   sceneToGo: {fileID: 11400000, guid: a5c7a0212ffee2643bec5df5ff5fd9ad, type: 2}
   positionToGo: {x: -2.53, y: 5.21, z: 0}
-  saveDataEvent: {fileID: 11400000, guid: a4e64d95b2a54324ab5432d8627ff9bf, type: 2}
 --- !u!4 &2135245309
 Transform:
   m_ObjectHideFlags: 0

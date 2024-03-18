@@ -11,6 +11,7 @@ public class FadeCanvas : MonoBehaviour
 
     public Image fadeImage;
 
+
     private void OnEnable()
     {
         fadeEvent.OnEventRaised += OnFadeEvent;
@@ -22,7 +23,7 @@ public class FadeCanvas : MonoBehaviour
     }
 
 
-    private void OnFadeEvent(Color targetcolor, float duration, bool fadeIn)
+    private void OnFadeEvent(Color targetcolor, float duration, bool fadeIn, string textName)
     {
         fadeImage.DOBlendableColor(targetcolor, duration);
     }

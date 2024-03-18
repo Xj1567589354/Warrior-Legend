@@ -7,6 +7,7 @@ public class Charactor : MonoBehaviour, ISaveable
 {
     [Header("事件监听")]
     public VoidEventSO newGameEvent;
+    public BoolEventSO boolEvent;
 
     public bool isPlayer;
 
@@ -50,6 +51,11 @@ public class Charactor : MonoBehaviour, ISaveable
         // 调用RegisterSaveData方法
         ISaveable saveable = this;
         saveable.RegisterSaveData();
+
+        if (isPlayer)
+        {
+            boolEvent.onEventRaised += SetHealth;
+        }
     }
 
     private void OnDisable()
@@ -58,6 +64,29 @@ public class Charactor : MonoBehaviour, ISaveable
         // 调用UnRegisterSaveData方法
         ISaveable saveable = this;
         saveable.UnRegisterSaveData();
+
+        if (isPlayer)
+        {
+            boolEvent.onEventRaised -= SetHealth;
+        }
+    }
+
+    /// <summary>
+    /// 捡血包加血
+    /// </summary>
+    /// <param name="islove"></param>
+    private void SetHealth(bool islove)
+    {
+        if (islove)
+        {
+            if (currentHealth + 20 >= 100)
+                currentHealth = 100;
+            else
+                currentHealth += 20;
+
+            onHealthChange?.Invoke(this);   // 更新血量
+            islove = false;
+        }
     }
 
     private void Update()

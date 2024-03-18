@@ -1,0 +1,4505 @@
+fileFormatVersion: 2
+guid: 8b5b242ac8f49f44c81b98ad04ec4548
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GUI_2x_sliced_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7927871c51aa04c9b6bfe0e934caa9
+      internalID: -1802469897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f950d650ba9aea44989e0f30b7c7a1d
+      internalID: 2032854697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd4d1a07c3d4fc4f9d933738e1719a1
+      internalID: -1552504057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 290
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee1071dae27b3544a6949b4c6b219be
+      internalID: 868380749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 290
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbfd1939b0e9614daeaa7f2caf55736
+      internalID: -2035293161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 290
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b3df6fbff2fdb4982d6ee2ebea9a04
+      internalID: 1691009780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 290
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80d615f17db1034ab36064e627de5d5
+      internalID: 1175891836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_7
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 290
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32520a531541a74687d149e77f81158
+      internalID: 2134206745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_8
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ef011da6cb2e0478e2df5d00735b32
+      internalID: -1921530823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2133442701f1288498c0062fed9f19e9
+      internalID: 215376545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_10
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb6ef3b5e55a114ea7308df06fb70f0
+      internalID: 1822880397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_11
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04e0d05f32c2534abc253cc8d22a4cc
+      internalID: -554569983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1b5c077c2c0e249be7b7a3712509af
+      internalID: 1904779612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae01dec50fac84418a2410cd3504413
+      internalID: -601902933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_14
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57add6d560e1cb344be95e0b517865e8
+      internalID: 1619308454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_15
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b054c9b25f04ab54bb265e933eeb8969
+      internalID: -1633309162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_16
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 256
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7e9351e1b3f3347be779fb5e8e7e4e
+      internalID: -1833338215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_17
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5574124f94e8984181ce0f3213d8cb7
+      internalID: -1174315861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_18
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 256
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda0983ae310f0b4f82cb5ced5ff32e0
+      internalID: -1084627716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_19
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 254
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9b6dadb1836a345915ad24a227c90b
+      internalID: 1079968819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_20
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 254
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e860fd51d938c649b5ba27a2c441acd
+      internalID: -2095260813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_21
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232280a20ea42c34ea6905cb9b9a6799
+      internalID: 136721125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_22
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a4fbd26f611e440a53150dd52734eb
+      internalID: 533450832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_23
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1257ace3bda5a644b013b6057a30378
+      internalID: -2026203811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 254
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db958967381c30c42969cf62d362f0f2
+      internalID: -841542531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_25
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 254
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2eccfed18a5f442a609eb3d5a07bc1
+      internalID: 447480658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_26
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 254
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3aec1628e85d7a478f557b56da276a8
+      internalID: 1901209710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_27
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 254
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf3d7858355abd4fb5a06c5bc61e5ac
+      internalID: 299928780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_28
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 254
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51dff7aba23cbf4a89d70917599b060
+      internalID: 630509812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_29
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 254
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea71a0ecf378b6a469d8089aca3eb841
+      internalID: 297134283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27640d8c3e3861e43b4953545c335c08
+      internalID: -1372805845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_31
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeee5b23ae22a9b42a879e7525ec4845
+      internalID: 1272090896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_32
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b82347152e7e6a48a6fe95f9e204191
+      internalID: -1700868017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_33
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 236
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d8d72eb17f3534ab331ca143d2cfa4
+      internalID: -1430300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_34
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 236
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb03efe278ed2c842a65400b85d75224
+      internalID: 1092645418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_35
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 238
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf9118c84eaa064b8d91c7170dae143
+      internalID: -1216837156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_36
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 238
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c48c932218a4943a3c49e80552f3d5
+      internalID: 2144321746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_37
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 238
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964df4004fd86f0439845e4d7e4228a0
+      internalID: -739693503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_38
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 238
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e07772ae95d6ca4db7db4f59862846c
+      internalID: -308908402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_39
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892b02f4883f51b4e8bc3e965810d1ac
+      internalID: 139346275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_40
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5cb020308b52f4abd34b13726cde46
+      internalID: -579025288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_41
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d0bb34e3d50ba489cda8571e582e35
+      internalID: 464063966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_42
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 212
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44750e41cc04c784a932287380fc48a7
+      internalID: 1054443986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_43
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 212
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1cfe3ea5ad4304cab6d7ef778934b6
+      internalID: 581329509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_44
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 212
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c1e113fdc053d4a98bae3b4bb75305
+      internalID: -1730411893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_45
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 212
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec26067e4d2b81344b381d4d3c63af1f
+      internalID: -2039945227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_46
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 212
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fea9ae89db46c44ca71942273ea2455
+      internalID: 699635567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_47
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 212
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262e7305b13c0ed49ac733ace3441089
+      internalID: 934207306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_48
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 212
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8bb39bf1512e2408cd935b9b329e60
+      internalID: -782392970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_49
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 212
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d68376c77f430c4e80a2ab2dc30fd98
+      internalID: -51687367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_50
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 212
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c173213bd8d3414f92ac08e04d06fd4
+      internalID: -1647964567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_51
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 212
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2ad89c9499e9f4fa0a74315f756934
+      internalID: 227964298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_52
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 212
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edb0d87b20f80b46b5b9a4bff96d26a
+      internalID: -2006508547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 212
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45794e9fd634ab48b2f91b4d49bf6b9
+      internalID: -198279037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_54
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 194
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d18371acb2be2429745f9e5896d8d6
+      internalID: -1161153773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_55
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 194
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06d66d8416318443ab5f12468c070b7
+      internalID: -543645394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_56
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 194
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f7d798695249f45b9cee29720d8bf0
+      internalID: 427931017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_57
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 194
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530ce7dd8f17b2a46bd54e4d38985df9
+      internalID: 938246692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_58
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 194
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3376ccebc32ee4788847ed5dcc1ef3
+      internalID: 1763442807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_59
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 194
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1159895922a624d4a86a7fca0557f5da
+      internalID: 1978954741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_60
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 194
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259e38510c9229d408d89fc1472c5183
+      internalID: -1944170610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 194
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6534db224d5cd2c41893d929878f760f
+      internalID: 352226655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_62
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 180
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3628e515f06de643b3ced906879bf67
+      internalID: 1726547250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_63
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 182
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aa7f95950ae714a82243d3d2623f7b
+      internalID: -470772722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_64
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 180
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053244987d65d3540937cb61e08ace45
+      internalID: -279288063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_65
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 182
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af851c83fcad5c64a9cae3bd13f5065a
+      internalID: -1014325546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_66
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 182
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79979284a9be8b3448687c9b1d7f8c8a
+      internalID: 696210932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_67
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 182
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f2fb92c9293954798075690a4c2326
+      internalID: 1742612894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_68
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 186
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30126e1257824fd4183c1eaba66220e9
+      internalID: -1716661819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_69
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 188
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e175f7f16068d459ca2ac871bc81af
+      internalID: 420374651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_70
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 186
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4876b2cc3f5e1d42bf7fcb35e19e543
+      internalID: -1511984479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_71
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 188
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768716f81e4faa44f9812a9d11faba18
+      internalID: -275719880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_72
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 188
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf021150b238fc341b2586a0942219d6
+      internalID: -2034481845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 188
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632e5dc9701a6c24da99886ad129e38f
+      internalID: 2110293173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_74
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330b7e7567b12db409b8dac39cf94b81
+      internalID: -1411257712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_75
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a5b76bcc79805428320b893fd0d210
+      internalID: 739746774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_76
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dece12309bf98e48acd64617113d82d
+      internalID: 672843890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_77
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a37eab54f12894b8228e995a278dad
+      internalID: 1580480043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_78
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5b949202e20084da2d67bccff42d6c
+      internalID: 1055231182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_79
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbe06a2dcff4c941a1a7238ac34b1f3
+      internalID: 1363097033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_80
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f0dccbf64be8d44a9e2ef924ddb4f6
+      internalID: -490323469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 158
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96eb42ae50af2a40a82ae141209d797
+      internalID: 761215619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_82
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 164
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dee181ef1eb7c4da96a4c594377f4c
+      internalID: 800105407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_83
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 164
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f13dc7606c86246acbe5a7fffbdf15
+      internalID: -272849358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_84
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 164
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b9d5972736619498860576f3988f84
+      internalID: -704820401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_85
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 164
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c7be0ddf743444ab18917ea95093b9
+      internalID: -570465342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_86
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 164
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3508db8a67f8544a271d28175b57fd
+      internalID: -200502998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_87
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 164
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cab6ce3c322494e8784fb5e9f4523a
+      internalID: 2128646842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_88
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 140
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a4e5cf4271358408536510eed04cd2
+      internalID: -896939462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_89
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 140
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642590b3835b98c4881fb8c753984723
+      internalID: 231465739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_90
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc18e619eab4cc4db693be66bff353b
+      internalID: 649120204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_91
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cad07e73cfd74b458e300a57e980790
+      internalID: -1599482768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_92
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aa21e7a5ac2224eaf524463dfa17bc
+      internalID: 818935135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_93
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dbb48230a78e047ab6e33a55ef94e6
+      internalID: -24910561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_94
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 148
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3be91d3f36f82c4186af0080e5b5dfe
+      internalID: -1194043987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_95
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 148
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9587a35cc61f443b6bbea9e05d375f
+      internalID: 1779799200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_96
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff51d722458c5b4da8e1815a1381929
+      internalID: -1791146148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_97
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936c35eb3411d6f499d336f9866a397f
+      internalID: 128120547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_98
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b96d4e13e82e14eb11ac0ee47706e8
+      internalID: 124998869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_99
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ca740a91aaa9b4c864d429cefa11e1
+      internalID: 1477832048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_100
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 122
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b659349b81596224c834819b63a08a6c
+      internalID: 413276269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_101
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 122
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a0b274ab73d244eb4d69e44771bb76
+      internalID: 190189188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_102
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f020762a3c53c40bfc4bd37eeb8b83
+      internalID: -994299046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_103
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430e43dec978c6e4a9545f6a88fdf89d
+      internalID: 1338582482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_104
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e653e361900808a4694d182b11d65e8e
+      internalID: -943506992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_105
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c65ca1c3e3e0140bb40ec485de9ff5
+      internalID: -113217806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_106
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 128
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996a3bc7556d32f43b5f4a3a01b318bd
+      internalID: 1184368279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_107
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 128
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72957c5c267898459f3e2680ff5a820
+      internalID: 684521345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_108
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ca38841dde5464f9acdc98b86c2775
+      internalID: -390906983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_109
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2715b536176ccf4292fe782dfa19fe2
+      internalID: 1920628854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_110
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd0532c9056d60458d7829a6445e63a
+      internalID: -2110433582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_111
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db2fe258323ec749afedcdb22f7a3a5
+      internalID: 1041348974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_112
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 106
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe8e377d9b50d446b17d47334ccabc6
+      internalID: -407578990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_113
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 106
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84705c8e2fd292543b1475faf948ccd3
+      internalID: -1356494158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_114
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 106
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03bd45516706c5469e63c0a27e3e2e4
+      internalID: 98847787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_115
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 106
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478798174e061524685e09a33cd52c25
+      internalID: -261141491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_116
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408c6e49bb33a654a858637bd8e476b1
+      internalID: 2083874488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_117
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50133057bf223f34b95d6f9aacfb8614
+      internalID: -1465601249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_118
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e39efac9c10cd43842e1f84d674682
+      internalID: -792379518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_119
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0623421bb067afc4da6c69a2e15d9cea
+      internalID: 2005148612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_120
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 112
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8977287dabd8f4e9d05ea0f98c966f
+      internalID: 1779522513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_121
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 112
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd9257a95614ee428211d69b764049c
+      internalID: -1180394016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_122
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 110
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2f66e30459fd04e9afd8bf47531e32
+      internalID: 2118909366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_123
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 110
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9132aab887ee49c43b769330c40716d0
+      internalID: 2101462766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_124
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 110
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deead90bb2a54a945b510afdf95127da
+      internalID: -983455396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_125
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 110
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3c01749d06eae4c95154acf38c400e
+      internalID: 1808972007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_126
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 76
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e66843b8a4d1ad42a10aff71fe0cdbf
+      internalID: 334042574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_127
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 92
+        width: 48
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cced81b0fed0cf4c9fcf168a84daeb6
+      internalID: -385087330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_128
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 76
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6841e84ef58c81247b24ffb24e58e57a
+      internalID: 1817868422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_129
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4ce00c816525f40aa123f118ad529a
+      internalID: 1243189930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_130
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 94
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da514f68511a0aa45a2257ec671e5d28
+      internalID: 909739139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_131
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c92eb127c67464aab5e0decc81a374
+      internalID: -565562760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_132
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 90
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb390b8da41663469399820d3e269e2
+      internalID: 1271128057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_133
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 90
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3186b2601a78c524a89fc1e1a8691535
+      internalID: -104261426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_134
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 94
+        width: 34
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d283cbc348d03444889e7ff4c48a4bf3
+      internalID: -147744095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_135
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 94
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06a4210c5c656047886bf52c4bcfa91
+      internalID: 282793532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_136
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 84
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1232b6cbb76be4e8accd33fe7a8812
+      internalID: -216409098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_137
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 76
+        width: 48
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048b5db51f326a54cad797673903c939
+      internalID: -1246085234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_138
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e1358320cb72142aa194e885fc1a41
+      internalID: -332927905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_139
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933a06edd26655943a449a1a96f10e03
+      internalID: 809844326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_140
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1cf115f2a67fb4b8acc6c1b417e7a1
+      internalID: 1987591362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_141
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 72
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170d3d522a0f7374c902748974438bd1
+      internalID: -1822316540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_142
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 70
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb472d54b268e624b87059f8f604b1c7
+      internalID: 2061235704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_143
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38aa1b23b722de4a89208300ed06314
+      internalID: -1654590872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_144
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d673ec7b01c85419bf168bb93eb361
+      internalID: 2084712895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_145
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33543d39fdeed454d96cdfc5d2805288
+      internalID: 1666278044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_146
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b49777c338038647b57f7616c19c964
+      internalID: 407276559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_147
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac72e579b5395f84e90347dced964672
+      internalID: 540214209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_148
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5013fc872bc2ff94195ca980be31de8e
+      internalID: -2079902235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_149
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 50
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a581edd8c541e56429a2f8984b814fa0
+      internalID: -1526466272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_150
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93adbf5f4d90e545a820c7a496bf3a7
+      internalID: 1630546405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_151
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 50
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd12a1ed1ea8fb4cb2e9582a143415f
+      internalID: -485674103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_152
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837fdc86f1b05414f8491436fecea55c
+      internalID: 1455216107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_153
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 60
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7bd7f26b80f914fb3d4efeb96d4b39
+      internalID: -1985027790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_154
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 60
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1f3e0ade95e634aa22cdd92ba69406
+      internalID: 2078612387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_155
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 60
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96a92de6a872a34eac1ca322a48e19d
+      internalID: -765972588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_156
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 60
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd15411576f34204ba4bd02f44844b03
+      internalID: 1037772749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_157
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 50
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7ac6e7d1ff60f4e89a34be256091fe
+      internalID: -960878959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_158
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ca31114ea8ba146b785e9fdc7e7019
+      internalID: 1474539435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_159
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 52
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5555f1b228e0fbd47a397c0ef0680f34
+      internalID: 1787798495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_160
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 52
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aaf9e2a163eceb47b82cfc4914b7a84
+      internalID: 378423511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_161
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 50
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7a21f93f209dc4d81ff7921baf3d7f
+      internalID: 1631529972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_162
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 50
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fc1000231670044ba8e618921e8494
+      internalID: 260448125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_163
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 50
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7cfd4d67831124db9331719c16c293
+      internalID: -1793192758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_164
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 50
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3664e475a031e4db25c7eb7a60d7f1
+      internalID: 928187380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_165
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 50
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68f857b39702bc47b264c31f6821b05
+      internalID: -1480970095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_166
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d51bd79a286464884127fe35019596
+      internalID: -177142343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_167
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc5a5dcf9a1682409d3abf5bfe72d58
+      internalID: -919586659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_168
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204f3b303ffc96a4b9213f99ddcdf017
+      internalID: 829987499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_169
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e652cfceab4f8244add57b258cc652f
+      internalID: -1064588837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_170
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe46167d0d6e624c8ee4045b510ed0b
+      internalID: -822508132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_171
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c083de704c795ef4da98b6cfe53f1b70
+      internalID: -1852972785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_172
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d951d3ee04d464788cf4f5581042e0
+      internalID: 2014095159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_173
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e4466a30156c44a8bb05c3874ab843
+      internalID: 1196806832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_174
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6620bae0a2d17c142b9cf90f314e0312
+      internalID: 928760285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_175
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f99eb184b7d3e64ba9d2ddf4ce0c8af
+      internalID: 1345160506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_176
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1710cfdefc299b4fa6597ac88febe22
+      internalID: 198894601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_177
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 34
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be1ab54fb2eada40a21954b44b9a62d
+      internalID: 1540840140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_178
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b231ade0305bbea44b0437804dff8ff9
+      internalID: -793754180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_179
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 20
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29aafb3ab72797448a35be0c0962476
+      internalID: -1253560832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_180
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac8408435f63f646a9d7306721b4405
+      internalID: -563806909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_181
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 20
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d71ce9310d8a34a82e706a512a4b1a
+      internalID: 1394814103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_182
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 20
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1389919e46bd7f34fae8a13371e3e155
+      internalID: -111384587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_183
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abf89c375bba1846b70b74494e57e1e
+      internalID: 1932739816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_184
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62dee4d2ec684794ba3090a85873bf6e
+      internalID: -1352517238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_185
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 22
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9d5866b38b0244c97af0275255ad46
+      internalID: 1781680285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_186
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ab32a77a9f62a418d038bb49c1a470
+      internalID: 1834027879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_187
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 16
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16df104a4e836248984b7637e1fc066
+      internalID: 806278564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_188
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 16
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c38b198819a524a9a9411ca3c887da
+      internalID: -1774872553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_189
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6940352c8d4ceb489b31c63ce942c4a
+      internalID: -2077937820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_190
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed6cebe564ce934d9b4da121550cb87
+      internalID: -1538981227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_191
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0e71e20c8557942ba666d0576e2ec0
+      internalID: 1339871916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_192
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192cd21f9f4996c46a9db4794e0e96ac
+      internalID: 1026954286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_193
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e843a6a057004b9499d0653d045575d5
+      internalID: -2078150618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_194
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b239a92fbbdaf48b4f1e2d9a4b21cf
+      internalID: -925018636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_195
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4f3ee0894bf0442b03caba2145bbbb
+      internalID: 1289503743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_196
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1559f1ff3e9f374ab9abee39199d30a
+      internalID: -344796624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_197
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79ab9f4fa00b644795dc53dd1b7e336
+      internalID: -1431346677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_2x_sliced_198
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c099249e4b085a4088f404b05b6137e
+      internalID: 214535022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GUI_2x_sliced_0: -1802469897
+      GUI_2x_sliced_1: 2032854697
+      GUI_2x_sliced_10: 1822880397
+      GUI_2x_sliced_100: 413276269
+      GUI_2x_sliced_101: 190189188
+      GUI_2x_sliced_102: -994299046
+      GUI_2x_sliced_103: 1338582482
+      GUI_2x_sliced_104: -943506992
+      GUI_2x_sliced_105: -113217806
+      GUI_2x_sliced_106: 1184368279
+      GUI_2x_sliced_107: 684521345
+      GUI_2x_sliced_108: -390906983
+      GUI_2x_sliced_109: 1920628854
+      GUI_2x_sliced_11: -554569983
+      GUI_2x_sliced_110: -2110433582
+      GUI_2x_sliced_111: 1041348974
+      GUI_2x_sliced_112: -407578990
+      GUI_2x_sliced_113: -1356494158
+      GUI_2x_sliced_114: 98847787
+      GUI_2x_sliced_115: -261141491
+      GUI_2x_sliced_116: 2083874488
+      GUI_2x_sliced_117: -1465601249
+      GUI_2x_sliced_118: -792379518
+      GUI_2x_sliced_119: 2005148612
+      GUI_2x_sliced_12: 1904779612
+      GUI_2x_sliced_120: 1779522513
+      GUI_2x_sliced_121: -1180394016
+      GUI_2x_sliced_122: 2118909366
+      GUI_2x_sliced_123: 2101462766
+      GUI_2x_sliced_124: -983455396
+      GUI_2x_sliced_125: 1808972007
+      GUI_2x_sliced_126: 334042574
+      GUI_2x_sliced_127: -385087330
+      GUI_2x_sliced_128: 1817868422
+      GUI_2x_sliced_129: 1243189930
+      GUI_2x_sliced_13: -601902933
+      GUI_2x_sliced_130: 909739139
+      GUI_2x_sliced_131: -565562760
+      GUI_2x_sliced_132: 1271128057
+      GUI_2x_sliced_133: -104261426
+      GUI_2x_sliced_134: -147744095
+      GUI_2x_sliced_135: 282793532
+      GUI_2x_sliced_136: -216409098
+      GUI_2x_sliced_137: -1246085234
+      GUI_2x_sliced_138: -332927905
+      GUI_2x_sliced_139: 809844326
+      GUI_2x_sliced_14: 1619308454
+      GUI_2x_sliced_140: 1987591362
+      GUI_2x_sliced_141: -1822316540
+      GUI_2x_sliced_142: 2061235704
+      GUI_2x_sliced_143: -1654590872
+      GUI_2x_sliced_144: 2084712895
+      GUI_2x_sliced_145: 1666278044
+      GUI_2x_sliced_146: 407276559
+      GUI_2x_sliced_147: 540214209
+      GUI_2x_sliced_148: -2079902235
+      GUI_2x_sliced_149: -1526466272
+      GUI_2x_sliced_15: -1633309162
+      GUI_2x_sliced_150: 1630546405
+      GUI_2x_sliced_151: -485674103
+      GUI_2x_sliced_152: 1455216107
+      GUI_2x_sliced_153: -1985027790
+      GUI_2x_sliced_154: 2078612387
+      GUI_2x_sliced_155: -765972588
+      GUI_2x_sliced_156: 1037772749
+      GUI_2x_sliced_157: -960878959
+      GUI_2x_sliced_158: 1474539435
+      GUI_2x_sliced_159: 1787798495
+      GUI_2x_sliced_16: -1833338215
+      GUI_2x_sliced_160: 378423511
+      GUI_2x_sliced_161: 1631529972
+      GUI_2x_sliced_162: 260448125
+      GUI_2x_sliced_163: -1793192758
+      GUI_2x_sliced_164: 928187380
+      GUI_2x_sliced_165: -1480970095
+      GUI_2x_sliced_166: -177142343
+      GUI_2x_sliced_167: -919586659
+      GUI_2x_sliced_168: 829987499
+      GUI_2x_sliced_169: -1064588837
+      GUI_2x_sliced_17: -1174315861
+      GUI_2x_sliced_170: -822508132
+      GUI_2x_sliced_171: -1852972785
+      GUI_2x_sliced_172: 2014095159
+      GUI_2x_sliced_173: 1196806832
+      GUI_2x_sliced_174: 928760285
+      GUI_2x_sliced_175: 1345160506
+      GUI_2x_sliced_176: 198894601
+      GUI_2x_sliced_177: 1540840140
+      GUI_2x_sliced_178: -793754180
+      GUI_2x_sliced_179: -1253560832
+      GUI_2x_sliced_18: -1084627716
+      GUI_2x_sliced_180: -563806909
+      GUI_2x_sliced_181: 1394814103
+      GUI_2x_sliced_182: -111384587
+      GUI_2x_sliced_183: 1932739816
+      GUI_2x_sliced_184: -1352517238
+      GUI_2x_sliced_185: 1781680285
+      GUI_2x_sliced_186: 1834027879
+      GUI_2x_sliced_187: 806278564
+      GUI_2x_sliced_188: -1774872553
+      GUI_2x_sliced_189: -2077937820
+      GUI_2x_sliced_19: 1079968819
+      GUI_2x_sliced_190: -1538981227
+      GUI_2x_sliced_191: 1339871916
+      GUI_2x_sliced_192: 1026954286
+      GUI_2x_sliced_193: -2078150618
+      GUI_2x_sliced_194: -925018636
+      GUI_2x_sliced_195: 1289503743
+      GUI_2x_sliced_196: -344796624
+      GUI_2x_sliced_197: -1431346677
+      GUI_2x_sliced_198: 214535022
+      GUI_2x_sliced_2: -1552504057
+      GUI_2x_sliced_20: -2095260813
+      GUI_2x_sliced_21: 136721125
+      GUI_2x_sliced_22: 533450832
+      GUI_2x_sliced_23: -2026203811
+      GUI_2x_sliced_24: -841542531
+      GUI_2x_sliced_25: 447480658
+      GUI_2x_sliced_26: 1901209710
+      GUI_2x_sliced_27: 299928780
+      GUI_2x_sliced_28: 630509812
+      GUI_2x_sliced_29: 297134283
+      GUI_2x_sliced_3: 868380749
+      GUI_2x_sliced_30: -1372805845
+      GUI_2x_sliced_31: 1272090896
+      GUI_2x_sliced_32: -1700868017
+      GUI_2x_sliced_33: -1430300206
+      GUI_2x_sliced_34: 1092645418
+      GUI_2x_sliced_35: -1216837156
+      GUI_2x_sliced_36: 2144321746
+      GUI_2x_sliced_37: -739693503
+      GUI_2x_sliced_38: -308908402
+      GUI_2x_sliced_39: 139346275
+      GUI_2x_sliced_4: -2035293161
+      GUI_2x_sliced_40: -579025288
+      GUI_2x_sliced_41: 464063966
+      GUI_2x_sliced_42: 1054443986
+      GUI_2x_sliced_43: 581329509
+      GUI_2x_sliced_44: -1730411893
+      GUI_2x_sliced_45: -2039945227
+      GUI_2x_sliced_46: 699635567
+      GUI_2x_sliced_47: 934207306
+      GUI_2x_sliced_48: -782392970
+      GUI_2x_sliced_49: -51687367
+      GUI_2x_sliced_5: 1691009780
+      GUI_2x_sliced_50: -1647964567
+      GUI_2x_sliced_51: 227964298
+      GUI_2x_sliced_52: -2006508547
+      GUI_2x_sliced_53: -198279037
+      GUI_2x_sliced_54: -1161153773
+      GUI_2x_sliced_55: -543645394
+      GUI_2x_sliced_56: 427931017
+      GUI_2x_sliced_57: 938246692
+      GUI_2x_sliced_58: 1763442807
+      GUI_2x_sliced_59: 1978954741
+      GUI_2x_sliced_6: 1175891836
+      GUI_2x_sliced_60: -1944170610
+      GUI_2x_sliced_61: 352226655
+      GUI_2x_sliced_62: 1726547250
+      GUI_2x_sliced_63: -470772722
+      GUI_2x_sliced_64: -279288063
+      GUI_2x_sliced_65: -1014325546
+      GUI_2x_sliced_66: 696210932
+      GUI_2x_sliced_67: 1742612894
+      GUI_2x_sliced_68: -1716661819
+      GUI_2x_sliced_69: 420374651
+      GUI_2x_sliced_7: 2134206745
+      GUI_2x_sliced_70: -1511984479
+      GUI_2x_sliced_71: -275719880
+      GUI_2x_sliced_72: -2034481845
+      GUI_2x_sliced_73: 2110293173
+      GUI_2x_sliced_74: -1411257712
+      GUI_2x_sliced_75: 739746774
+      GUI_2x_sliced_76: 672843890
+      GUI_2x_sliced_77: 1580480043
+      GUI_2x_sliced_78: 1055231182
+      GUI_2x_sliced_79: 1363097033
+      GUI_2x_sliced_8: -1921530823
+      GUI_2x_sliced_80: -490323469
+      GUI_2x_sliced_81: 761215619
+      GUI_2x_sliced_82: 800105407
+      GUI_2x_sliced_83: -272849358
+      GUI_2x_sliced_84: -704820401
+      GUI_2x_sliced_85: -570465342
+      GUI_2x_sliced_86: -200502998
+      GUI_2x_sliced_87: 2128646842
+      GUI_2x_sliced_88: -896939462
+      GUI_2x_sliced_89: 231465739
+      GUI_2x_sliced_9: 215376545
+      GUI_2x_sliced_90: 649120204
+      GUI_2x_sliced_91: -1599482768
+      GUI_2x_sliced_92: 818935135
+      GUI_2x_sliced_93: -24910561
+      GUI_2x_sliced_94: -1194043987
+      GUI_2x_sliced_95: 1779799200
+      GUI_2x_sliced_96: -1791146148
+      GUI_2x_sliced_97: 128120547
+      GUI_2x_sliced_98: 124998869
+      GUI_2x_sliced_99: 1477832048
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,15 +7,15 @@ using UnityEngine.Events;
 public class FadeEventSO : ScriptableObject
 {
 
-    public UnityAction<Color, float, bool> OnEventRaised;
+    public UnityAction<Color, float, bool, string> OnEventRaised;
 
     /// <summary>
     /// 逐渐变黑
     /// </summary>
     /// <param name="duration">时间</param>
-    public void FadeIn(float duration)
+    public void FadeIn(Color color, float duration, string textName)
     {
-        RaiseEvent(Color.black, duration, true);
+        RaiseEvent(color, duration, true, textName);
     }
 
 
@@ -23,13 +23,13 @@ public class FadeEventSO : ScriptableObject
     /// 逐渐变透明
     /// </summary>
     /// <param name="duration">时间</param>
-    public void FadeOut(float duration) 
+    public void FadeOut(float duration, string textName) 
     {
-        RaiseEvent(Color.clear, duration, false);
+        RaiseEvent(Color.clear, duration, false, textName);
     }
 
-    public void RaiseEvent(Color color,float duration, bool fadeIn)
+    public void RaiseEvent(Color color,float duration, bool fadeIn, string textName)
     {
-        OnEventRaised?.Invoke(color,duration,fadeIn);
+        OnEventRaised?.Invoke(color,duration,fadeIn,textName);
     }
 }

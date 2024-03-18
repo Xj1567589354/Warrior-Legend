@@ -116,7 +116,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         if (fadeSceen)
         {
             //TODD:变黑
-            fadeEvent.FadeIn(fadeDurationTime);
+            fadeEvent.FadeIn(Color.black, fadeDurationTime, "YesT");
         }
 
         yield return currentLoadedScene.assetReference.UnLoadScene();        // 卸载场景
@@ -159,7 +159,7 @@ public class SceneLoader : MonoBehaviour, ISaveable
         if (fadeSceen)
         {
             //TODO：变透明 
-            fadeEvent.FadeOut(fadeDurationTime);
+            fadeEvent.FadeOut(fadeDurationTime, "YesT");
         }
 
         isLoading = false;

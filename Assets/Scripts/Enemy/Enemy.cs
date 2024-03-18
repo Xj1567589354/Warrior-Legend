@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public Vector3 faceDir;     // 面朝方向
     [HideInInspector] public Vector2 hurtDir;     // 受伤方向
     public GameObject coin;     // 掉落金币
+    public GameObject love;    // 掉落血包
     public float delayTime;     // 掉落延迟时间
 
     public Transform attacker;  // 攻击者
@@ -213,9 +214,25 @@ public class Enemy : MonoBehaviour
 
     public void OnDestroyAfterAnimation()
     {
-        Instantiate(coin, transform.position, Quaternion.identity);
+        // 随机刷新金币或者血包
+        int randonNum = Random.Range(0, 2);
+        switch (randonNum)
+        {
+            case 0:
+                Instantiate(coin, transform.position, Quaternion.identity);
+                break;
+            case 1:
+                Instantiate(love, transform.position, Quaternion.identity);
+                break;
+        }
+
         enemyNumbers.enemyList.Remove(this.gameObject);
         Destroy(this.gameObject);
+    }
+
+    public void OnUpdataBeDesLayer()
+    {
+        this.gameObject.layer = LayerMask.NameToLayer("Enemy");
     }
     #endregion
 }

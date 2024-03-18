@@ -13,10 +13,19 @@ public class EnemyNumbers : MonoBehaviour
     public GameObject CenterBottomUI;
     public bool istelepoint;
 
+    public FadeEventSO fadeEvent;
+    public FadeEventSO textFadeEvent;
+
+    private Color color;
+    private Color textColor;
+
     private void OnEnable()
     {
         enemyFa = this.transform;
         UpdataChildList();
+
+        color = new Color(0, 0, 0, 0.6f);
+        textColor = new Color(0, 1, 0.7f, 1);
     }
 
 
@@ -39,14 +48,21 @@ public class EnemyNumbers : MonoBehaviour
         {
             istelepoint = true;
             telePoint.SetActive(true);
-            StartCoroutine(SetCBUI());      // 3s关闭UI
+            
+            // 传送门提示
+            fadeEvent.FadeIn(color, 1.5f, "YesT");
+            textFadeEvent.FadeIn(textColor, 1.5f, "YesT");
+            Invoke("SetCBUI", 3f);
         }
     }
 
-    IEnumerator SetCBUI()
+    /// <summary>
+    ///关闭传送门提示
+    /// </summary>
+    void SetCBUI()
     {
-        CenterBottomUI.SetActive(true);
-        yield return new WaitForSeconds(3f);
-        CenterBottomUI.SetActive(false);
+        // 传送门提示
+        fadeEvent.FadeOut(1.5f, "YesT");
+        textFadeEvent.FadeOut(1.5f, "YesT");
     }
 }
