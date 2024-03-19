@@ -37,12 +37,14 @@ public class DataManager : MonoBehaviour
     public GameObject caveSavePoint02;
     public GameObject caveSavePoint03;
     public GameObject c_enemy;
+    public GameObject c_prompt;
 
     [Header("Foreast场景资产")]
     public GameObject f_Chest;
     public GameObject f_Chest02;
     public GameObject forestSavePoint;
     public GameObject telepoint;
+    public GameObject f_prompt;
     public GameObject f_enemy;
 
     [Header("Houce场景资产")]
@@ -59,6 +61,7 @@ public class DataManager : MonoBehaviour
     public GameObject hiveSavePoint;
     public GameObject hiveSavePoint02;
     public GameObject h_enemy;
+    public GameObject h_prompt;
 
     [Header("状态")]
     public bool isPointDone;
@@ -87,6 +90,7 @@ public class DataManager : MonoBehaviour
                 f_Chest02.SetActive(true);
                 forestSavePoint.SetActive(true);
                 f_enemy.SetActive(true);
+                f_prompt.SetActive(true);
             }
             if (currentGameScene == Cave)
             {
@@ -97,6 +101,7 @@ public class DataManager : MonoBehaviour
                 caveSavePoint02.SetActive(true);
                 caveSavePoint03.SetActive(true);
                 c_enemy.SetActive(true);
+                c_prompt.SetActive(true);
             }
             if (currentGameScene == Houce)
             {
@@ -113,6 +118,7 @@ public class DataManager : MonoBehaviour
                 hive_Chest06.SetActive(true);
                 hiveSavePoint.SetActive(true);
                 hiveSavePoint02.SetActive(true);
+                h_prompt.SetActive(true);
                 h_enemy.SetActive(true);
                 isBoss = true;
             }
@@ -125,6 +131,7 @@ public class DataManager : MonoBehaviour
                 f_Chest02.SetActive(false);
                 forestSavePoint.SetActive(false);
                 f_enemy.SetActive(false);
+                f_prompt.SetActive(false);
             }
             if (currentGameScene == Cave)
             {
@@ -135,6 +142,7 @@ public class DataManager : MonoBehaviour
                 caveSavePoint02.SetActive(false);
                 caveSavePoint03.SetActive(false);
                 c_enemy.SetActive(false);
+                c_prompt.SetActive(false);
             }
             if (currentGameScene == Houce)
             {
@@ -151,6 +159,7 @@ public class DataManager : MonoBehaviour
                 hive_Chest06.SetActive(false);
                 hiveSavePoint.SetActive(false);
                 hiveSavePoint02.SetActive(false);
+                h_prompt.SetActive(false);
                 h_enemy.SetActive(false);
             }
         }

@@ -10,6 +10,8 @@ public class TextPromt : MonoBehaviour
     private Color textColor;
     private Color color;
 
+    public GameObject telepoint;
+
     public bool isTrigger;
 
     private void OnEnable()
@@ -18,9 +20,11 @@ public class TextPromt : MonoBehaviour
         color = new Color(0, 0, 0, 0.6f);
     }
 
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isTrigger) {
+        if (!isTrigger && !telepoint.activeSelf) {
             // 传送门提示
             fadeEvent.FadeIn(color, 1.5f, "NoT");
             textFadeEvent.FadeIn(textColor, 1.5f, "NoT");

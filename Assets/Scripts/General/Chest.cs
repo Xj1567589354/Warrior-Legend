@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Permissions;
@@ -11,7 +10,8 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
     public Sprite closeSprite;
     private SpriteRenderer spriteRenderer;
     public bool isDone;
-    public GameObject coin;
+    public GameObject key;
+    public GameObject key02;
 
     private void Awake()
     {
@@ -58,7 +58,17 @@ public class Chest : MonoBehaviour, Iinteractable, ISaveable
 
     void GetCoin()
     {
-        Instantiate(coin, transform.position, Quaternion.identity);
+        int randonNum = Random.Range(0, 2);
+        print(randonNum);
+        switch (randonNum)
+        {
+            case 0:
+                Instantiate(key, transform.position, Quaternion.identity);
+                break;
+            case 1:
+                Instantiate(key02, transform.position, Quaternion.identity);
+                break;
+        }
     }
 
     public DataDefinition GetDataID()
