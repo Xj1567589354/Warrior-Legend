@@ -1854,11 +1854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5076876718928429604, guid: fe5f7a198cfe8e643b71bf85c05de9d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.01
+      value: -48.5
       objectReference: {fileID: 0}
     - target: {fileID: 5076876718928429604, guid: fe5f7a198cfe8e643b71bf85c05de9d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.17
+      value: 39.15
       objectReference: {fileID: 0}
     - target: {fileID: 5076876718928429604, guid: fe5f7a198cfe8e643b71bf85c05de9d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2859,7 +2859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.01, y: -9.07, z: -10}
+  m_LocalPosition: {x: -48.5, y: 40.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7011,7 +7011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121111232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.01, y: -9.07, z: -10}
+  m_LocalPosition: {x: -48.5, y: 40.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8697,6 +8697,7 @@ MonoBehaviour:
   Cave: {fileID: 11400000, guid: ea213357f3f09394caee2fd1c277242d, type: 2}
   Houce: {fileID: 11400000, guid: a5c7a0212ffee2643bec5df5ff5fd9ad, type: 2}
   Hive: {fileID: 11400000, guid: 266ba061fa35a90449a20d5c0e736ea4, type: 2}
+  Boss: {fileID: 11400000, guid: 7f4116e95945d9c4bad722c0a8512d95, type: 2}
   sceneLoader: {fileID: 1608431640}
   count: 0
   forestSP: {fileID: 1131594486}
@@ -10993,6 +10994,10 @@ PrefabInstance:
     - target: {fileID: 3301843761556976401, guid: 79eab4cafc589e141a9ac66a35e56655, type: 3}
       propertyPath: maxHealth
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816437061256146118, guid: 79eab4cafc589e141a9ac66a35e56655, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6054658618830795775, guid: 79eab4cafc589e141a9ac66a35e56655, type: 3}
       propertyPath: patrolRadius

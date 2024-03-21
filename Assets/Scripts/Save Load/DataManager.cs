@@ -19,6 +19,7 @@ public class DataManager : MonoBehaviour
     public GameSceneSO Cave;
     public GameSceneSO Houce;
     public GameSceneSO Hive;
+    public GameSceneSO Boss;
 
     public static DataManager instance;     // 单例模式
     private List<ISaveable> saveableList = new List<ISaveable>();       // 列表
