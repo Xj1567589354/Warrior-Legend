@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6727112966372919402}
   - component: {fileID: 793798142053992263}
   - component: {fileID: 6966993910449648137}
-  - component: {fileID: 4156564361258670442}
+  - component: {fileID: 8655044453500162942}
   m_Layer: 8
   m_Name: Eye
   m_TagString: Untagged
@@ -38,6 +38,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5388684240470015621}
+  - {fileID: 5260949833539507203}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,8 +147,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.32020298, y: -0.15443426}
-  m_Size: {x: 1.2045007, y: 1.2045007}
+  m_Offset: {x: 0.3347161, y: -0.15443426}
+  m_Size: {x: 1.4947617, y: 1.4947617}
   m_Direction: 1
 --- !u!50 &4732890366687670966
 Rigidbody2D:
@@ -230,7 +231,7 @@ MonoBehaviour:
   onTakeDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8655044453500162942}
         m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
         m_MethodName: OnTakeDamage
         m_Mode: 0
@@ -257,7 +258,7 @@ MonoBehaviour:
   onDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8655044453500162942}
         m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
         m_MethodName: OnDie
         m_Mode: 1
@@ -293,8 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8edaf4c26c1dc439aa86376d29a5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  attackRange: 1
+  damage: 25
+  attackRange: 1.5
   attackRate: 2
 --- !u!114 &6966993910449648137
 MonoBehaviour:
@@ -310,7 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   persistentType: 0
   ID: 704c9674-03dc-4d5c-b07b-c9f6e1608f5a
---- !u!114 &4156564361258670442
+--- !u!114 &8655044453500162942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,14 +320,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389259818210215684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acaee7a078a51b34e89009191c709325, type: 3}
+  m_Script: {fileID: 11500000, guid: 20286f507dcf6004a83e36afeadd703d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   animator: {fileID: 0}
   physicsCheck: {fileID: 0}
-  normalSpeed: 60
-  chaseSpeed: 120
+  normalSpeed: 80
+  chaseSpeed: 150
   currentSpeed: 0
   hurtForce: 3
   faceDir: {x: 0, y: 0, z: 0}
@@ -337,7 +338,7 @@ MonoBehaviour:
   attacker: {fileID: 0}
   spwanPoint: {x: 0, y: 0, z: 0}
   enemyNumbers: {fileID: 0}
-  waitTime: 2
+  waitTime: 3
   waitTimeCounter: 0
   wait: 0
   lostTime: 3
@@ -350,7 +351,7 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 128
-  patrolRadius: 5
+  patrolRadius: 4
 --- !u!1 &3733360472003013806
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3733360472003013806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.34, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -457,3 +458,86 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &6256570736317836978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5260949833539507203}
+  - component: {fileID: 3544828172474997595}
+  - component: {fileID: 6258361619158931880}
+  m_Layer: 8
+  m_Name: Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5260949833539507203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6256570736317836978}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1, y: -0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7171126415365181499}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &3544828172474997595
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6256570736317836978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.25}
+  m_Size: {x: 0.5, y: 0.5}
+  m_Direction: 0
+--- !u!114 &6258361619158931880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6256570736317836978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8edaf4c26c1dc439aa86376d29a5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  attackRange: 0
+  attackRate: 0

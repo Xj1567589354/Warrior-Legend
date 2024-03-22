@@ -16,6 +16,7 @@ public class PhysicsCheck : MonoBehaviour
     public bool isTouchLeftWall;
     public bool isTouchRightWall;
     public bool onWall;
+    public bool isBoss;
 
     [Header("¼à²â²ÎÊý")]
     //¼à²â°ë¾¶
@@ -54,10 +55,13 @@ public class PhysicsCheck : MonoBehaviour
     public void Check()
     {
         // µØÃæ¼ì²â
-        if(onWall)
+        if(onWall || isBoss)
             isGround = Physics2D.OverlapCircle((Vector2)transform.position+new Vector2(bottomOffset.x * transform.localScale.x, bottomOffset.y), checkRadius, layerMask);
         else
+        {
             isGround = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(bottomOffset.x * transform.localScale.x, 0), checkRadius, layerMask);
+        }
+
 
         // Ç½Ìå¼ì²â
         isTouchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(leftOffset.x, leftOffset.y), checkRadius, layerMask);
