@@ -64,9 +64,12 @@ public class DataManager : MonoBehaviour
     public GameObject h_enemy;
     public GameObject h_prompt;
 
+    [Header("Boss场景资产")]
+    public GameObject b_enemy;
+
     [Header("状态")]
     public bool isPointDone;
-    public bool isBoss;
+    public bool isBoss;         // 是否开启Boss关卡
 
     private void Awake()
     {
@@ -123,6 +126,10 @@ public class DataManager : MonoBehaviour
                 h_enemy.SetActive(true);
                 isBoss = true;
             }
+            if (currentGameScene == Boss)
+            {
+                b_enemy.SetActive(true);
+            }
         }
         else
         {
@@ -162,6 +169,10 @@ public class DataManager : MonoBehaviour
                 hiveSavePoint02.SetActive(false);
                 h_prompt.SetActive(false);
                 h_enemy.SetActive(false);
+            }
+            if (currentGameScene == Boss)
+            {
+                b_enemy.SetActive(false);
             }
         }
 

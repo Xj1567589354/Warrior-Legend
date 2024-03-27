@@ -90,7 +90,6 @@ public class Enemy : MonoBehaviour
         {
             // ÒÆ¶¯
             Move();
-            print("good122");
         }
     }
 

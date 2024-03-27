@@ -63,7 +63,7 @@ public class BeeChaseState : BaseState
     {
         // ÒÆ¶¯
         if (!currentEnemy.isHurt && !currentEnemy.isDead&&!isAttack)
-            currentEnemy.rb.velocity = moveDir * currentEnemy.currentSpeed * Time.deltaTime;
+            currentEnemy.rb.velocity = moveDir * currentEnemy.chaseSpeed * Time.deltaTime;
     }
 
     public override void OnExit()

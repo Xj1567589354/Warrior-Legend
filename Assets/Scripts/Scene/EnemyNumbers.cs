@@ -12,6 +12,7 @@ public class EnemyNumbers : MonoBehaviour
 
     public GameObject CenterBottomUI;
     public bool istelepoint;
+    public bool isBoss;         // ÊÇ·ñÊÇboss¹Ø¿¨
 
     public FadeEventSO fadeEvent;
     public FadeEventSO textFadeEvent;
@@ -24,8 +25,11 @@ public class EnemyNumbers : MonoBehaviour
         enemyFa = this.transform;
         UpdataChildList();
 
-        color = new Color(0, 0, 0, 0.6f);
-        textColor = new Color(0, 1, 0.7f, 1);
+        if (!isBoss)
+        {
+            color = new Color(0, 0, 0, 0.6f);
+            textColor = new Color(0, 1, 0.7f, 1);
+        }
     }
 
 
@@ -44,7 +48,7 @@ public class EnemyNumbers : MonoBehaviour
 
     private void Update()
     {
-        if (enemyList.Count <= 0 && !istelepoint)
+        if (enemyList.Count <= 0 && !istelepoint && !isBoss)
         {
             istelepoint = true;
             telePoint.SetActive(true);
