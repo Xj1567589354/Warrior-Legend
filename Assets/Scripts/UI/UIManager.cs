@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public Boar blackBoar;
     public Boar redBoar;
     public GameObject telepoint;
+    private bool isBossDead;
 
     [Header("事件监听")]
      /*作为中间者进行广播和监听*/
@@ -49,25 +50,26 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (DataManager.instance.currentGameScene == DataManager.instance.Boss
-             && !boss.isDead)
+        // 如果当前处于BOSS关卡
+        if (DataManager.instance.currentGameScene == DataManager.instance.Boss && !boss.isDead)
         {
-            bossHealthBar.gameObject.SetActive(true);
+            bossHealthBar.gameObject.SetActive(true);       // 打开boss血条
         }
 
-        if (DataManager.instance.currentGameScene == DataManager.instance.Boss
-            && boss.isDead)
+        if (DataManager.instance.currentGameScene == DataManager.instance.Boss && boss.isDead)
         {
             if (!blackBoar.isDead && !redBoar.isDead)
             {
+                bossHealthBar.gameObject.SetActive(false);
                 telepoint.SetActive(true);
                 blackBoar.OnDie();
                 redBoar.OnDie();
-                bossHealthBar.gameObject.SetActive(false);
                 print("dead");
             }
         }
 
+        if (DataManager.instance.currentGameScene != DataManager.instance.Boss)
+            bossHealthBar.gameObject.SetActive(false);
     }
 
     private void OnGameOverEvent()
@@ -101,6 +103,6 @@ public class UIManager : MonoBehaviour
     {
         /*int类型不足1，就会舍去小数部分，直接等于0*/
         var persentage = (float)charactor.currentHealth / charactor.maxHealth;
-        bossHealthBar.OnHealthChange(persentage);
+        bossHealthBar.OnHealthChange(persentage, charactor.currentHealth);
     }
 }
